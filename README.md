@@ -2,7 +2,7 @@
 
 ### Describe what your team is proposing to build
 
-We are proposing to build a website which allows the user the tools to build their own Buzzfeed-esque quiz. Users should be able to save quizzes after creation. Pre-rendered example quizzes will be provided for users to play around with at launch.
+We propose to make a website with quizzes that generate a result based on the user's answers. User will be prompted with a multiple choice quiz embellished with pictures and an intuitive UI. After this, the quiz will spit out a result based on the answers to said question. Pre-rendered example quizzes will be provided for users to play around with at launch. We are also proposing to add a feature to this website which allows the user the tools to build their own Buzzfeed-esque quiz. Users should be able to save quizzes after creation. This, however, is a stretch goal. 
 
 #### Possible Titles:
 - Boozefeed Quizzes
