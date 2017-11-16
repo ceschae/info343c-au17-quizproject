@@ -10,7 +10,6 @@ We are proposing to build a website which allows the user the tools to build the
 - Buzzkill Quizzes
 - Online Quiz Maker 
 
-
 #### Example Quizzes:
 - Which booze are you?
 - Which kind of hangover are you?
@@ -18,11 +17,11 @@ We are proposing to build a website which allows the user the tools to build the
 - Which mid-life crisis Kanye West outfit are you?
 - On a scale of 1-10, how “Pizza Rat” are you?
 
-
 #### Reach Goals:
 - Saving user results
 - User generated quizzes
 
+---
 
 ### Identify which team member will work on which parts
 
@@ -43,6 +42,7 @@ We are proposing to build a website which allows the user the tools to build the
 - example quiz, quiz design
 - home page design
 
+---
 
 ### List out any frameworks and libraries that you intend to use
 - Bootstrap, for design and interactions usage
