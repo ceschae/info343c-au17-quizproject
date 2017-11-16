@@ -1,6 +1,6 @@
-##INFO 343 Final Project Proposal
+## INFO 343 Final Project Proposal
 
-###Describe what your team is proposing to build
+### Describe what your team is proposing to build
 
 We are proposing to build a website which allows the user the tools to build their own Buzzfeed-esque quiz. Users should be able to save quizzes after creation. Pre-rendered example quizzes will be provided for users to play around with at launch.
 
