@@ -1,12 +1,12 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
-
+import constants from "./constants";
 import firebase from 'firebase/app';
 
 export default class SignInView extends React.Component {
     constructor(props) {
         super(props);
-        this.state =  {
+        this.state = {
             authenticated: false,
             email: "",
             password: "",
@@ -61,7 +61,7 @@ export default class SignInView extends React.Component {
                         <button type="submit" className="btn btn-primary">Sign In!</button>
                     </div>
                 </form>
-                <p>Don't yet have an account? <Link to={"/signup"}>Sign Up!</Link></p>
+                <p>Don't yet have an account? <Link to={constants.routes.signup}>Sign Up!</Link></p>
             </div>
       ) 
     }
