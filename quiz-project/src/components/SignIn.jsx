@@ -6,7 +6,7 @@ import firebase from 'firebase/app';
 export default class SignInView extends React.Component {
     constructor(props) {
         super(props);
-        this.state =  {
+        this.state = {
             authenticated: false,
             email: "",
             password: "",
@@ -15,7 +15,9 @@ export default class SignInView extends React.Component {
 
     componentWillMount() {
         this.authUnsub = firebase.auth().onAuthStateChanged(user => {
-          this.setState({authenticated: true});
+            if(user) {
+                this.setState({authenticated: true});
+            }
         });
       }
     componentWillUnmount() {
@@ -39,7 +41,7 @@ export default class SignInView extends React.Component {
                     : undefined
                 }
                 {
-                    this.state.authenticated && <Redirect to="quiz/ceceQuiz" />
+                    this.state.authenticated ? <Redirect to="/quiz" /> : undefined
                 }
 
                 <h1 className="text-primary">Sign In</h1>
