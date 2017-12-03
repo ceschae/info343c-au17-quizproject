@@ -2,6 +2,9 @@ import React from 'react';
 import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 
 import firebase from 'firebase/app';
+import constants from "./constants";
+import 'firebase/auth';
+import 'firebase/database';
 
 export default class SignOutView extends React.Component {
     constructor(props) {

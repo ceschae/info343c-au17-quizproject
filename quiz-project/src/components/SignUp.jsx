@@ -51,7 +51,7 @@ export default class SignUpView extends React.Component {
                 : undefined
             }
             { 
-                this.state.authenticated && <Redirect to="" />
+                this.state.authenticated && <Redirect to="quiz/ceceQuiz" />
             }
             <h1 className="text-primary">Sign Up</h1>
             

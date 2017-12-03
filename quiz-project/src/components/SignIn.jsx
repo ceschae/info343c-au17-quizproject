@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
-
+import constants from "./constants";
 import firebase from 'firebase/app';
 
 export default class SignInView extends React.Component {
@@ -39,7 +39,7 @@ export default class SignInView extends React.Component {
                     : undefined
                 }
                 {
-                    this.state.authenticated && <Redirect to="" />
+                    this.state.authenticated && <Redirect to="quiz/ceceQuiz" />
                 }
 
                 <h1 className="text-primary">Sign In</h1>
@@ -59,7 +59,7 @@ export default class SignInView extends React.Component {
                         <button type="submit" className="btn btn-primary">Sign In!</button>
                     </div>
                 </form>
-                <p>Don't yet have an account? <Link to={"/signup"}>Sign Up!</Link></p>
+                <p>Don't yet have an account? <Link to={constants.routes.signup}>Sign Up!</Link></p>
             </div>
       ) 
     }
