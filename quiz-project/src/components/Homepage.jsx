@@ -15,11 +15,11 @@ export default class Homepage extends React.Component {
             <div className="container">
                 <ul className="nav nav-tabs nav-fill mb-3">
                     <li className="nav-item">
-                        <Link to = "/quiz" className="nav-link" onClick={()=>window.location.reload()}> 
+                        <Link to = "/home" className="nav-link" onClick={()=>window.location.reload()}> 
                             Quizzes</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/quiz/create" className="nav-link" onClick={()=>window.location.reload()}>
+                        <Link to="/create" className="nav-link" onClick={()=>window.location.reload()}>
                         Create</Link>
                     </li>
                     <li className="nav-item">
