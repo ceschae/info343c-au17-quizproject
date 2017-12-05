@@ -1,12 +1,12 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
-
+import constants from "./constants";
 import firebase from 'firebase/app';
 
 export default class SignInView extends React.Component {
     constructor(props) {
         super(props);
-        this.state =  {
+        this.state = {
             authenticated: false,
             email: "",
             password: "",
@@ -15,7 +15,9 @@ export default class SignInView extends React.Component {
 
     componentWillMount() {
         this.authUnsub = firebase.auth().onAuthStateChanged(user => {
-          this.setState({authenticated: true});
+            if(user) {
+                this.setState({authenticated: true});
+            }
         });
       }
     componentWillUnmount() {
@@ -39,7 +41,7 @@ export default class SignInView extends React.Component {
                     : undefined
                 }
                 {
-                    this.state.authenticated && <Redirect to="" />
+                    this.state.authenticated ? <Redirect to="/home" /> : undefined
                 }
 
                 <h1 className="text-primary">Sign In</h1>
@@ -59,7 +61,7 @@ export default class SignInView extends React.Component {
                         <button type="submit" className="btn btn-primary">Sign In!</button>
                     </div>
                 </form>
-                <p>Don't yet have an account? <Link to={"/signup"}>Sign Up!</Link></p>
+                <p>Don't yet have an account? <Link to={constants.routes.signup}>Sign Up!</Link></p>
             </div>
       ) 
     }

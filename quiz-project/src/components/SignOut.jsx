@@ -2,6 +2,9 @@ import React from 'react';
 import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 
 import firebase from 'firebase/app';
+import constants from "./constants";
+import 'firebase/auth';
+import 'firebase/database';
 
 export default class SignOutView extends React.Component {
     constructor(props) {
@@ -21,7 +24,8 @@ export default class SignOutView extends React.Component {
     this.authUnsub();
     }
     
-    handleSignOut() {
+    handleSignOut(evt) {
+        evt.preventDefault();
         this.setState({errorMessage: undefined}); 
         firebase.auth().signOut()
         .catch(err => this.setState({errorMessage: err.message}));
@@ -30,7 +34,16 @@ export default class SignOutView extends React.Component {
 	render() {
         return (
             <div>
-                <button className="btn btn-danger" onClick={evt => this.handleSignOut()}>Sign Out!</button>
+                {
+                     this.state.authenticated ? undefined :
+                    <Router>
+                        <Route path="/" render={() => (
+                            <Redirect push to="/"/>
+                        )} />
+                    </Router>
+                  
+                }
+                <button className="btn btn-danger" onClick={evt => this.handleSignOut(evt)}>Sign Out!</button>
             </div>
 
         );
