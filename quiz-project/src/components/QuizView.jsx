@@ -23,6 +23,7 @@ export default class QuizView extends React.Component {
     }
 
     render () {
+        console.log(this.props.location.state.quizRef);
         //let quiz = this.props.quizSnapshot.val();
         //{quiz.quizDetails.title}
         //{quiz.author.displayName}
