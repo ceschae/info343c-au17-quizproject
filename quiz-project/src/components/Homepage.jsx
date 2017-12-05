@@ -40,8 +40,7 @@ export default class Homepage extends React.Component {
                             Quizzes</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/create" className="nav-link" onClick={()=>window.location.reload()}>
-                        Create</Link>
+                        <Link to="/create" className="nav-link" onClick={()=>window.location.reload()}> Create</Link>
                     </li>
                     <li className="nav-item">
                         <Link to = "/profile" className="nav-link" onClick={()=>window.location.reload()} > Profile</Link>
