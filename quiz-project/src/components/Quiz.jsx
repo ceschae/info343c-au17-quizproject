@@ -28,16 +28,23 @@ export default class Quiz extends React.Component {
     -save quiz
     */
     render() {
-      return (
+        let qList = [];
+        this.state.tasksSnapshot.forEach(quizSnapshot => {
+            qList.push(<QuizQuestionForm key={taskSnapshot.key} taskSnapshot={taskSnapshot} />)
+        });
+        return (
             <div id="quiz">
                 <form id="title-form" className="form-group">
                     <label>Quiz Title</label>
                     <input className="form-control" placeholder="Title" onInput={evt => this.setState({quizTitle: evt.target.value})}/>
                 </form>
 
-                <QuizQuestion />
+                <QuizQuestion questionList={qList} />
 
-                <div id="add-new-question">
+                
+            </div>
+        ) 
+        /*<div id="add-new-question">
                 </div>
 
                 <div id="add-result-form">
@@ -45,7 +52,6 @@ export default class Quiz extends React.Component {
 
                 <div id="save-quiz-button">
                 </div>
-            </div>
-        ) 
+                */
     }
 }
