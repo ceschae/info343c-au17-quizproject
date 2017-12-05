@@ -4,13 +4,13 @@ import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-route
 
 import firebase from 'firebase/app';
 import Question from "./Question";
-import Results from "./Results";
+import ResultsView from "./Results";
 
 export default class QuizView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            //author: 
+            done: false
         }
     }
 
@@ -19,31 +19,46 @@ export default class QuizView extends React.Component {
         document.querySelectorAll(".answer").forEach(answer => {
             score += parseInt(answer.value);
         });
+        this.setState({
+            score: score,
+            done: true
+        });
     }
 
     render () {
         let quizRef = this.props.location.state.quizRef;
-        console.log("quiz details:", quizRef.quizDetails);
-
-        //let questionDetails = quizRef.quizDetails.question1;
-        //console.log("question1 question", questionDetails.question);
-        //console.log("question answer", questionDetails.option1.answer);
         return (
             <div className="container">
                 <h1>{quizRef.quizDetails.title}</h1>
                 <h4 className="pb-3">Quiz created by: {quizRef.author.displayName}</h4>
+                <hr />
                 <h5>{quizRef.quizDetails.description}</h5>
-                <Question number="1" questionDetails={quizRef.quizDetails.question1}/>
-                <Question number="2" />
-                <Question number="3" />
-                <Question number="4" />
-                <Question number="5" />
-                <Question number="6" />
-                <Question number="7" />
+                <div className="row m-2">
+                    <div className="col">
+                        <img src={quizRef.quizDetails.results.result1.imageUrl} className="img-thumbnail" />
+                    </div>
+                    <div className="col">
+                        <img src={quizRef.quizDetails.results.result2.imageUrl} className="img-thumbnail" />
+                    </div>
+                    <div className="col">
+                        <img src={quizRef.quizDetails.results.result3.imageUrl} className="img-thumbnail" />
+                    </div>
+                </div>
+                
+                <Question number="1" qRef={quizRef.quizDetails.question1}/>
+                <Question number="2" qRef={quizRef.quizDetails.question2}/>
+                <Question number="3" qRef={quizRef.quizDetails.question3}/>
+                <Question number="4" qRef={quizRef.quizDetails.question4}/>
+                <Question number="5" qRef={quizRef.quizDetails.question5}/>
+                <Question number="6" qRef={quizRef.quizDetails.question6}/>
+                <Question number="7" qRef={quizRef.quizDetails.question7}/>
 
                 <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
                     onClick={() => this.handleSubmit()}>Submit!</button>
 
+                {
+                    this.state.done && <ResultsView />
+                }
             </div>
         );
     }
