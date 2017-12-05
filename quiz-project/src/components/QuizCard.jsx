@@ -17,8 +17,8 @@ export default class QuizCard extends React.Component {
                         <button className="btn btn-primary">
                         <Link to= {{
                             pathname:'/quiz/' + this.props.quizSnapshot.key,
-                            state: {quizRef: quiz}}
-                     }> Click here</Link></button>
+                            state: {quizRef: quiz}}}> 
+                            Click here</Link></button>
                     </div>
                 </div>
             </div>
