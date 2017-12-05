@@ -6,6 +6,9 @@ import firebase from 'firebase/app';
 
 export default class Question extends React.Component {
     render () {
+        console.log("question details", this.props.questionDetails);
+        console.log("question", this.props.questionDetails.question);
+        console.log("question option 1", this.props.questionDetails.option1.answer);
         return (
             <div className="container pb-3">
             <div className="card">
@@ -14,12 +17,12 @@ export default class Question extends React.Component {
                     <h4 className="card-title">Question {this.props.number}</h4>
                     
                     <div className="form-group">
-                        <label htmlFor="answers">Label here if necessary </label>
+                        <label htmlFor="answers">{this.props.questionDetails.question}</label>
                         <select className="form-control answer">
-                            <option value="1">Answer Option 1</option>
-                            <option value="2">Answer Option 2</option>
-                            <option value="3">Answer Option 3</option>
-                            <option value="4">Answer Option 4</option>
+                            <option value="1">{this.props.questionDetails.option1.answer}</option>
+                            <option value="2">{this.props.questionDetails.option2.answer}</option>
+                            <option value="3">{this.props.questionDetails.option3.answer}</option>
+                            <option value="4">{this.props.questionDetails.option4.answer}</option>
                         </select>
                   </div>
                 </div>
