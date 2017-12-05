@@ -6,7 +6,7 @@ import QuizView from "./components/QuizView";
 import SignInView from "./components/SignIn";
 import SignUpView from "./components/SignUp";
 import SignOutView from "./components/SignOut";
-import Quiz from "./components/Quiz";
+import CreateQuiz from "./components/CreateQuiz";
 import Homepage from "./components/Homepage";
 import ProfileView from './components/Profile';
 
@@ -14,7 +14,6 @@ import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
-    let quizRef = firebase.database().ref("quizzes");
     return (
       <div className="App">
         <header className="jumbotron bg-dark">
@@ -29,12 +28,12 @@ class App extends Component {
                 <Route path={constants.routes.quiz} component={QuizView} />
                 <Route path="/home" component={Homepage} />
                 <Route path="/profile" component={Homepage} />
+                <Route path="/create" component={CreateQuiz} />
                 <Route component={SignInView} />
               </Switch>
             </Router>
           </div>
         </div>
-        <Quiz quizRef={quizRef} />
       </div>
     );
   }
