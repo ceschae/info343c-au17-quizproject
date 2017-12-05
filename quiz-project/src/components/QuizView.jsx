@@ -15,7 +15,6 @@ export default class QuizView extends React.Component {
     }
 
     handleSubmit() {
-        console.log("submitted");
         let score = 0;
         document.querySelectorAll(".answer").forEach(answer => {
             score += parseInt(answer.value);
@@ -23,16 +22,18 @@ export default class QuizView extends React.Component {
     }
 
     render () {
-        console.log(this.props.location.state.quizRef);
-        //let quiz = this.props.quizSnapshot.val();
-        //{quiz.quizDetails.title}
-        //{quiz.author.displayName}
-        //pass in the necessary values into the components to be able to display
+        let quizRef = this.props.location.state.quizRef;
+        console.log("quiz details:", quizRef.quizDetails);
+
+        //let questionDetails = quizRef.quizDetails.question1;
+        //console.log("question1 question", questionDetails.question);
+        //console.log("question answer", questionDetails.option1.answer);
         return (
             <div className="container">
-                <h1>Quiz Title</h1>
-                <h4 className="pb-3">Quiz created by: Author</h4>
-                <Question number="1" />
+                <h1>{quizRef.quizDetails.title}</h1>
+                <h4 className="pb-3">Quiz created by: {quizRef.author.displayName}</h4>
+                <h5>{quizRef.quizDetails.description}</h5>
+                <Question number="1" questionDetails={quizRef.quizDetails.question1}/>
                 <Question number="2" />
                 <Question number="3" />
                 <Question number="4" />

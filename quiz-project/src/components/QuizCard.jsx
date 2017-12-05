@@ -4,8 +4,6 @@ import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-route
 import firebase from 'firebase/app';
 
 export default class QuizCard extends React.Component {
-
-  
     render () {
         let quiz = this.props.quizSnapshot.val();
         return (
@@ -19,7 +17,7 @@ export default class QuizCard extends React.Component {
                         <button className="btn btn-primary">
                         <Link to= {{
                             pathname:'/quiz/' + this.props.quizSnapshot.key,
-                             state: {quizRef: quiz}}
+                            state: {quizRef: quiz}}
                      }> Click here</Link></button>
                     </div>
                 </div>
