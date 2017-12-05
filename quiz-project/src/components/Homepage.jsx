@@ -36,31 +36,35 @@ export default class Homepage extends React.Component {
             <div className="container">
                 <ul className="nav nav-tabs nav-fill mb-3">
                     <li className="nav-item">
-                        <Link to = "/home" className="nav-link" onClick={()=>window.location.reload()}> 
+                        <Link to = "/home" className="nav-link" > 
                             Quizzes</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/create" className="nav-link" onClick={()=>window.location.reload()}>
+                        <Link to="/create" className="nav-link" >
                         Create</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to = "/profile" className="nav-link" onClick={()=>window.location.reload()} > Profile</Link>
+                        <Link to = "/profile" className="nav-link" > Profile</Link>
                     </li>
                     <li className="nav-item">
                         <SignOutView />
                     </li>
                 </ul>
 
-    
             {
-                (window.location==="/profile") ?
-                <div className="container">
-                    <ProfileView />
-                </div> : 
-                <div>
-                    {quizzes}
-                </div>
-                 //where we put the quizzes
+                (() => {
+                    switch(window.location.hash){
+                        case "#/create": return <div className="container">Create Quiz</div>;
+                        case "#/profile": return <div className="container">
+                                                     <ProfileView />
+                                                </div>;
+                        default: return <div>
+                                            {quizzes}
+                                        </div>;
+                    }
+
+                })()
+
             }
 
             </div>

@@ -27,6 +27,7 @@ class App extends Component {
                 <Route path={constants.routes.quiz} component={QuizView} />
                 <Route path="/home" component={Homepage} />
                 <Route path="/profile" component={Homepage} />
+                <Route path="/create" component={Homepage} />
                 <Route component={SignInView} />
               </Switch>
             </Router>
