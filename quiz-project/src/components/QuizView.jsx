@@ -4,13 +4,16 @@ import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-route
 
 import firebase from 'firebase/app';
 import Question from "./Question";
-import ResultsView from "./Results";
+import Results from "./Results";
 
 export default class QuizView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            done: false
+            done: false,
+            score: 7,
+            description: "",
+            imageUrl: ""
         }
     }
 
@@ -19,9 +22,36 @@ export default class QuizView extends React.Component {
         document.querySelectorAll(".answer").forEach(answer => {
             score += parseInt(answer.value);
         });
+
+        let resultRef = this.props.location.state.quizRef.quizDetails.results;
+        let result = "";
+        if (score <= 13) { //result 1
+            result = resultRef.result1;
+        } else if (score <= 21) { //result 2
+            result = resultRef.result2;
+        } else { //result 3
+            result = resultRef.result3;
+        }
+
         this.setState({
             score: score,
-            done: true
+            done: true,
+            description: result.description,
+            imageUrl: result.imageUrl
+        });  
+
+        this.submitResult(result.description, result.imageUrl);
+    }
+
+    submitResult(description, image) {
+        let resultsRef = firebase.database().ref("results");
+        resultsRef.push({
+            quizTitle: this.props.location.state.quizRef.quizDetails.title,
+            result: {
+                description: description,
+                imageUrl: image
+            },
+            uid: firebase.auth().currentUser.uid
         });
     }
 
@@ -53,11 +83,13 @@ export default class QuizView extends React.Component {
                 <Question number="6" qRef={quizRef.quizDetails.question6}/>
                 <Question number="7" qRef={quizRef.quizDetails.question7}/>
 
-                <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
-                    onClick={() => this.handleSubmit()}>Submit!</button>
-
                 {
-                    this.state.done && <ResultsView />
+                    this.state.done ? 
+                    <Results description={this.state.description} 
+                        image={this.state.imageUrl} />
+                    :
+                    <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
+                    onClick={() => this.handleSubmit()}>Submit!</button>
                 }
             </div>
         );
