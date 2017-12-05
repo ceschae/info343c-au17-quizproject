@@ -42,11 +42,12 @@ export default class CreateQuiz extends React.Component {
         });*/
         return (
             <div id="quiz" className="w-100">
-                <form id="title-form" className="form-group">
-                    <label>Quiz Title</label>
-                    <input className="form-control" placeholder="Title" onInput={evt => this.setState({quizTitle: evt.target.value})}/>
-                </form>
-
+                <div className="card">
+                    <div className="card-body">
+                        <h4 className="card-title">Quiz Title:</h4>
+                        <input className="form-control" placeholder="What should the quiz be called?" onInput={evt => this.setState({quizTitle: evt.target.value})}/>
+                    </div>
+                </div>
                 <div className="w-100">
                     <QuizQuestionForm id={1}/>
                     <QuizQuestionForm id={2}/>
@@ -56,6 +57,9 @@ export default class CreateQuiz extends React.Component {
                     <QuizQuestionForm id={6}/>
                     <QuizQuestionForm id={7}/>
                 </div>
+
+                <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
+                    onClick={() => this.handleSubmit()}>Submit!</button>
                 
             </div>
         ) 

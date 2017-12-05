@@ -11,10 +11,9 @@ export default class QuizQuestionForm extends React.Component {
             a2Text: "",
             a3Text: "",
             a4Text: "",
-            a1Img: "",
-            a2Img: "",
-            a3Img: "",
-            a4Img: ""
+            r1Img: "",
+            r2Img: "",
+            r3Img: ""
         }
     }
 
@@ -42,40 +41,14 @@ export default class QuizQuestionForm extends React.Component {
     render() {
         return (
             <form>
-                <div className="form-group">
-                    <label>Question {this.props.id}:</label>
-                    <input className="form-control" placeholder="What question should the user answer?" />
-                </div>
-                <div className="card w-50">
-                    <img className="card-img-top" src={constants.imgs.default} alt="Question 1 Image" />
+                <div className="card">
                     <div className="card-body">
-                        <h4 className="card-title">Answer 1:</h4>
+                        <h4 className="card-title">Question {this.props.id}:</h4>
+                        <input className="form-control" placeholder="What question should the user answer?" />
                         <input className="form-control" placeholder="First answer" />
-                        <input className="form-control" placeholder="Answer image URL" />
-                    </div>
-                </div>
-                <div className="card w-50">
-                    <img className="card-img-top" src={constants.imgs.default} alt="Question 2 Image" />
-                    <div className="card-body">
-                        <h4 className="card-title">Answer 2:</h4>
                         <input className="form-control" placeholder="Second answer" />
-                        <input className="form-control" placeholder="Answer image URL" />
-                    </div>
-                </div>
-                <div className="card w-50">
-                    <img className="card-img-top" src={constants.imgs.default} alt="Question 3 Image" />
-                    <div className="card-body">
-                        <h4 className="card-title">Answer 3:</h4>
                         <input className="form-control" placeholder="Third answer" />
-                        <input className="form-control" placeholder="Answer image URL" />
-                    </div>
-                </div>
-                <div className="card w-50">
-                    <img className="card-img-top" src={constants.imgs.default} alt="Question 4 Image" />
-                    <div className="card-body">
-                        <h4 className="card-title">Answer 4:</h4>
                         <input className="form-control" placeholder="Fourth answer" />
-                        <input className="form-control" placeholder="Answer image URL" />
                     </div>
                 </div>
             </form>       
