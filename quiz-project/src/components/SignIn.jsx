@@ -41,7 +41,7 @@ export default class SignInView extends React.Component {
                     : undefined
                 }
                 {
-                    this.state.authenticated ? <Redirect to="/quiz" /> : undefined
+                    this.state.authenticated ? <Redirect to="/home" /> : undefined
                 }
 
                 <h1 className="text-primary">Sign In</h1>
