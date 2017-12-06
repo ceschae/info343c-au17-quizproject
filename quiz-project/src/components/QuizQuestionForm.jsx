@@ -5,50 +5,33 @@ import constants from "./constants";
 export default class QuizQuestionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            questionText: "",
-            a1Img: "",
-            a2Text: "",
-            a3Text: "",
-            a4Text: "",
-            r1Img: "",
-            r2Img: "",
-            r3Img: ""
-        }
     }
 
-    handleSubmit(evt) {
-        evt.preventDefault();
-        this.props.questionRef.push({
-            question: this.state.questionText,
-            a1: this.state.a1Text,
-            a2: this.state.a2Text,
-            a3: this.state.a3Text,
-            a4: this.state.a4Text
-        });
-        this.setState({
-            questionText: "",
-            a1Text: "",
-            a2Text: "",
-            a3Text: "",
-            a4Text: ""
-        });
-    }
-
-    /* 
-    
-    */
     render() {
+        let question = "question" + this.props.id;
         return (
             <form>
                 <div className="card">
-                    <div className="card-body">
+                    <div className="card-body" id={question}>
                         <h4 className="card-title">Question {this.props.id}:</h4>
-                        <input className="form-control" placeholder="What question should the user answer?" />
-                        <input className="form-control" placeholder="First answer" />
-                        <input className="form-control" placeholder="Second answer" />
-                        <input className="form-control" placeholder="Third answer" />
-                        <input className="form-control" placeholder="Fourth answer" />
+                        <input className="form-control question" placeholder="What question should the user answer?" 
+                            />
+                        <div className="d-flex">
+                            <input className="form-control answer1" placeholder="Answer Option 1" />
+                            <input className="form-control points1" placeholder="Points" />
+                        </div>
+                        <div className="d-flex">
+                            <input className="form-control answer2" placeholder="Answer Option 2" />
+                            <input className="form-control points2" placeholder="Points" />
+                        </div>
+                        <div className="d-flex">
+                            <input className="form-control answer3" placeholder="Answer Option 3" />
+                            <input className="form-control points3" placeholder="Points" />
+                        </div>
+                        <div className="d-flex">
+                            <input className="form-control answer4" placeholder="Answer Option 4" />
+                            <input className="form-control points4" placeholder="Points" />
+                        </div>
                     </div>
                 </div>
             </form>       
