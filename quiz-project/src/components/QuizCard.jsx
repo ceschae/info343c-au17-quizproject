@@ -14,7 +14,7 @@ export default class QuizCard extends React.Component {
                     <h4 className="card-title">{quiz.quizDetails.title}</h4>
                     <div className="card-body">
                         <p>{quiz.quizDetails.description}</p>
-                        <button className="btn btn-light">
+                        <button className="btn btn-outline-primary">
                         <Link to= {{
                             pathname:'/quiz/' + this.props.quizSnapshot.key,
                             state: {quizRef: quiz}}}> 

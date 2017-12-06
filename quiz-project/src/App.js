@@ -6,6 +6,7 @@ import QuizView from "./components/QuizView";
 import SignInView from "./components/SignIn";
 import SignUpView from "./components/SignUp";
 import SignOutView from "./components/SignOut";
+import CreateQuiz from "./components/CreateQuiz";
 import Homepage from "./components/Homepage";
 import ProfileView from './components/Profile';
 
@@ -27,7 +28,7 @@ class App extends Component {
                 <Route path={constants.routes.quiz} component={QuizView} />
                 <Route path="/home" component={Homepage} />
                 <Route path="/profile" component={Homepage} />
-                <Route path="/create" component={Homepage} />
+                <Route path="/create" component={CreateQuiz} />
                 <Route component={SignInView} />
               </Switch>
             </Router>
