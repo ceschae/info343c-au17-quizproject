@@ -50,7 +50,7 @@ export default class ProfileView extends React.Component {
                 <h3>Profile</h3>
                 <p><strong>Display Name: </strong> {this.state.curUser.displayName}</p>
                 <p><strong>Email: </strong>{this.state.curUser.email}</p>
-                <div className="text-left">
+                <div>
                     <h4>Quizzes You've Taken:</h4>
                     <div className="row">
                         {quizzes}
