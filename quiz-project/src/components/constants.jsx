@@ -2,7 +2,11 @@ export default {
     routes: {
         signin: "/",
         signup: "/signup",
-        quiz: "/quiz/:quizKey"
+        quiz: "/quiz/:quizKey",
+        home: "/home",
+        create: "/create",
+        profile: "/profile",
+        about: "/about"
     },
 
     imgs: {

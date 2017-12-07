@@ -30,25 +30,9 @@ export default class Homepage extends React.Component {
         this.state.quizzesSnapshot.forEach(quizSnapshot => {
             quizzes.push(<QuizCard key={quizSnapshot.key} 
                 quizSnapshot = {quizSnapshot} />);
-        });
-        //chanName is gonna be either: /quiz, /quiz/create, profile, ...     
+        });   
         return (
             <div className="container">
-                <ul className="nav nav-tabs nav-fill mb-3">
-                    <li className="nav-item">
-                        <Link to = "/home" className="nav-link" > 
-                            Quizzes</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/create" className="nav-link"> Create</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to = "/profile" className="nav-link" > Profile</Link>
-                    </li>
-                    <li className="nav-item">
-                        <SignOutView />
-                    </li>
-                </ul>
 
             {
                 (() => {

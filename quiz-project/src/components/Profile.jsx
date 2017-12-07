@@ -50,13 +50,17 @@ export default class ProfileView extends React.Component {
                 <h3>Profile</h3>
                 <p><strong>Display Name: </strong> {this.state.curUser.displayName}</p>
                 <p><strong>Email: </strong>{this.state.curUser.email}</p>
-                <div>
+                <div className="text-left">
                     <h4>Quizzes You've Taken:</h4>
+                    <div className="row">
                         {quizzes}
+                    </div>
                 </div>
                 <div>
                     <h4>Quizzes You've Written:</h4>
+                    <div className="row">
                         {authored}
+                    </div>
                 </div>
             </div>
         )
