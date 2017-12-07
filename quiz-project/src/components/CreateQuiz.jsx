@@ -29,133 +29,75 @@ export default class CreateQuiz extends React.Component {
                     question: document.querySelector("#question1 .question").value,
                     option1: {
                         answer: document.querySelector("#question1 .answer1").value,
-                        points: document.querySelector("#question1 .points1").value
+                        points: document.querySelector("#question1 .point1").value
                     },
                     option2: {
                         answer: document.querySelector("#question1 .answer2").value,
-                        points: document.querySelector("#question1 .points2").value
+                        points: document.querySelector("#question1 .point2").value
                     },
                     option3: {
                         answer: document.querySelector("#question1 .answer3").value,
-                        points: document.querySelector("#question1 .points3").value
-                    },
-                    option4: {
-                        answer: document.querySelector("#question1 .answer4").value,
-                        points: document.querySelector("#question1 .points4").value
+                        points: document.querySelector("#question1 .point2").value
                     }
                 },
                 question2: {
                     question: document.querySelector("#question2 .question").value,
                     option1: {
                         answer: document.querySelector("#question2 .answer1").value,
-                        points: document.querySelector("#question2 .points1").value
+                        points: document.querySelector("#question2 .point1").value
                     },
                     option2: {
                         answer: document.querySelector("#question2 .answer2").value,
-                        points: document.querySelector("#question2 .points2").value
+                        points: document.querySelector("#question2 .point2").value
                     },
                     option3: {
                         answer: document.querySelector("#question2 .answer3").value,
-                        points: document.querySelector("#question2 .points3").value
-                    },
-                    option4: {
-                        answer: document.querySelector("#question2 .answer4").value,
-                        points: document.querySelector("#question2 .points4").value
+                        points: document.querySelector("#question2 .point3").value
                     }
                 },
                 question3: {
                     question: document.querySelector("#question3 .question").value,
                     option1: {
                         answer: document.querySelector("#question3 .answer1").value,
-                        points: document.querySelector("#question3 .points1").value
+                        points: document.querySelector("#question3 .point1").value
                     },
                     option2: {
                         answer: document.querySelector("#question3 .answer2").value,
-                        points: document.querySelector("#question3 .points2").value
+                        points: document.querySelector("#question3 .point2").value
                     },
                     option3: {
                         answer: document.querySelector("#question3 .answer3").value,
-                        points: document.querySelector("#question3 .points3").value
-                    },
-                    option4: {
-                        answer: document.querySelector("#question3 .answer4").value,
-                        points: document.querySelector("#question3 .points4").value
+                        points: document.querySelector("#question3 .point3").value
                     }
                 },
                 question4: {
                     question: document.querySelector("#question4 .question").value,
                     option1: {
                         answer: document.querySelector("#question4 .answer1").value,
-                        points: document.querySelector("#question4 .points1").value
+                        points: document.querySelector("#question4 .point1").value
                     },
                     option2: {
                         answer: document.querySelector("#question4 .answer2").value,
-                        points: document.querySelector("#question4 .points2").value
+                        points: document.querySelector("#question4 .point2").value
                     },
                     option3: {
                         answer: document.querySelector("#question4 .answer3").value,
-                        points: document.querySelector("#question4 .points3").value
-                    },
-                    option4: {
-                        answer: document.querySelector("#question4 .answer4").value,
-                        points: document.querySelector("#question4 .points4").value
+                        points: document.querySelector("#question4 .point3").value
                     }
                 },
                 question5: {
                     question: document.querySelector("#question5 .question").value,
                     option1: {
                         answer: document.querySelector("#question5 .answer1").value,
-                        points: document.querySelector("#question5 .points1").value
+                        points: document.querySelector("#question5 .point1").value
                     },
                     option2: {
                         answer: document.querySelector("#question5 .answer2").value,
-                        points: document.querySelector("#question5 .points2").value
+                        points: document.querySelector("#question5 .point2").value
                     },
                     option3: {
                         answer: document.querySelector("#question5 .answer3").value,
-                        points: document.querySelector("#question5 .points3").value
-                    },
-                    option4: {
-                        answer: document.querySelector("#question5 .answer4").value,
-                        points: document.querySelector("#question5 .points4").value
-                    }
-                },
-                question6: {
-                    question: document.querySelector("#question6 .question").value,
-                    option1: {
-                        answer: document.querySelector("#question6 .answer1").value,
-                        points: document.querySelector("#question6 .points1").value
-                    },
-                    option2: {
-                        answer: document.querySelector("#question6 .answer2").value,
-                        points: document.querySelector("#question6 .points2").value
-                    },
-                    option3: {
-                        answer: document.querySelector("#question6 .answer3").value,
-                        points: document.querySelector("#question6 .points3").value
-                    },
-                    option4: {
-                        answer: document.querySelector("#question6 .answer4").value,
-                        points: document.querySelector("#question6 .points4").value
-                    }
-                },
-                question7: {
-                    question: document.querySelector("#question7 .question").value,
-                    option1: {
-                        answer: document.querySelector("#question7 .answer1").value,
-                        points: document.querySelector("#question7 .points1").value
-                    },
-                    option2: {
-                        answer: document.querySelector("#question7 .answer2").value,
-                        points: document.querySelector("#question7 .points2").value
-                    },
-                    option3: {
-                        answer: document.querySelector("#question7 .answer3").value,
-                        points: document.querySelector("#question7 .points3").value
-                    },
-                    option4: {
-                        answer: document.querySelector("#question7 .answer4").value,
-                        points: document.querySelector("#question7 .points4").value
+                        points: document.querySelector("#question5 .point3").value
                     }
                 },
                 results: {
@@ -180,10 +122,6 @@ export default class CreateQuiz extends React.Component {
     render() {
         return (
             <div id="quiz" className="w-100">
-                <p className="text-primary">There are 7 questions. All the fields are required and must be completed. Points
-                are assigned to each answer option for each question. This is used to calculate the 
-                algorithm to assign the proper results.
-                </p>
                 <div className="card">
                     <div className="card-body">
                         <h4 className="card-title">Quiz Title:</h4>
@@ -192,27 +130,26 @@ export default class CreateQuiz extends React.Component {
                     </div>
                 </div>
                 <div className="w-100">
+                    <ResultForm id={1}/>
+                    <ResultForm id={2}/>
+                    <ResultForm id={3}/>
+                    <hr />
+
+                    <p className="text-primary pt-2">
+                        There are a total of 5 questions with 3 possible results. Using the drop down menu next to each question to 
+                        Assign each question to the corresponding
+                    </p>
                     <QuizQuestionForm id={1}/>
                     <QuizQuestionForm id={2}/>
                     <QuizQuestionForm id={3}/>
                     <QuizQuestionForm id={4}/>
                     <QuizQuestionForm id={5}/>
-                    <QuizQuestionForm id={6}/>
-                    <QuizQuestionForm id={7}/>
-
-                    <p className="pt-4 text-primary">The algorithm has already been calculated based on the assigned point values for 
-                        each question's answer options. Enter a description and image assosiated with 
-                        the three possible outcomes.</p>
-
-                    <ResultForm id={1}/>
-                    <ResultForm id={2}/>
-                    <ResultForm id={3}/>
                 </div>
 
                 {
                     this.state.allDone ? 
                     <div>
-                        <div class="alert alert-success" role="alert">Success! Your quiz has been stored successfully.</div>
+                        <div className="alert alert-success" role="alert">Success! Your quiz has been stored successfully.</div>
                         <button className="btn btn-primary btn-lg btn-block mb-5 mt-3"
                         onClick={() => {window.location.hash = "/home"}}>
                         View All Quizzes</button>

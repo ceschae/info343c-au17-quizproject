@@ -9,7 +9,7 @@ import SignOutView from "./components/SignOut";
 import CreateQuiz from "./components/CreateQuiz";
 import Homepage from "./components/Homepage";
 import ProfileView from './components/Profile';
-import './components/App.css';
+
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 class App extends Component {
