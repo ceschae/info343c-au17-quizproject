@@ -16,9 +16,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="jumbotron">
-          <h1>Quiz Biz</h1>
-        </header>
+          <header className="jumbotron">
+          <h1 className="text-primary display-3">Boozefeed Quizzes</h1>
+          </header>
         <div className="container">
           <div className="row">
             <Router>
