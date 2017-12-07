@@ -63,14 +63,14 @@ export default class QuizView extends React.Component {
                 <h4 className="pb-3">Quiz created by: {quizRef.author.displayName}</h4>
                 <hr />
                 <h5>{quizRef.quizDetails.description}</h5>
-                <div className="row m-2">
-                    <div className="col">
+                <div className="row m-2" id="cuntar">
+                    <div className="crop col-xs-12 col-sm-4 col-md-4 ">
                         <img src={quizRef.quizDetails.results.result1.imageUrl} className="img-thumbnail" />
                     </div>
-                    <div className="col">
+                    <div className="crop col-xs-12 col-sm-4 col-md-4 ">
                         <img src={quizRef.quizDetails.results.result2.imageUrl} className="img-thumbnail" />
                     </div>
-                    <div className="col">
+                    <div className="crop col-xs-12 col-sm-4 col-md-4 ">
                         <img src={quizRef.quizDetails.results.result3.imageUrl} className="img-thumbnail" />
                     </div>
                 </div>

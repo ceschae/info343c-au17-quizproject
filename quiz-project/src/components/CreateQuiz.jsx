@@ -9,20 +9,13 @@ export default class CreateQuiz extends React.Component {
         super(props);
         this.state = {
             quizTitle: "",
-            description: ""
+            description: "",
+            allDone: false
         }
     }
 
     handleSubmit() {
-        console.log("submitted");
         let quizzesRef = firebase.database().ref("quizzes"); // PUSH INTO THIS
-        /*
-        quizzesRef.push({
-            test: "this is a test"
-        });
-        */
-
-        
         
         quizzesRef.push({
             author: {
@@ -174,33 +167,17 @@ export default class CreateQuiz extends React.Component {
                         description: document.querySelector("#result2 .result").value,
                         imageUrl: document.querySelector("#result2 .image").value
                     },
-                    results3: {
+                    result3: {
                         description: document.querySelector("#result3 .result").value,
                         imageUrl: document.querySelector("#result3 .image").value
                     }
                 }
             }
         });
+        this.setState({ allDone: true });
     }
 
-
-    /* 
-    -insert quiz title
-    -insert a pic url, question, and 4 possible answers
-      + any number of questions
-    -add final results and criteria for results
-    -save quiz
-    */
     render() {
-        /*
-        let quizRef = firebase.database().ref("quizzes");   
-        if(!this.state.quizSnapshot) {
-            return <div>Loading... Please be patient</div>;
-        }
-        let qList = [];
-        this.state.quizSnapshot.forEach(snapshot => {
-            qList.push(<QuizQuestionForm key={snapshot.key} quizSnapshot={snapshot} />)
-        });*/
         return (
             <div id="quiz" className="w-100">
                 <p className="text-primary">There are 7 questions. All the fields are required and must be completed. Points
@@ -232,19 +209,18 @@ export default class CreateQuiz extends React.Component {
                     <ResultForm id={3}/>
                 </div>
 
-                <button type="button" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
+                {
+                    this.state.allDone ? 
+                    <div>
+                        <div class="alert alert-success" role="alert">Success! Your quiz has been stored successfully.</div>
+                        <button className="btn btn-primary btn-lg btn-block mb-5 mt-3"
+                        onClick={() => {window.location.hash = "/home"}}>
+                        View All Quizzes</button>
+                    </div> :
+                    <button type="button" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
                     onClick={() => this.handleSubmit()}>Submit!</button>
-                
+                }
             </div>
-        ) 
-        /*<div id="add-new-question">
-                </div>
-
-                <div id="add-result-form">
-                </div>
-
-                <div id="save-quiz-button">
-                </div>
-                */
+        )
     }
 }
