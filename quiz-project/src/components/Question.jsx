@@ -19,7 +19,6 @@ export default class Question extends React.Component {
                             <option value={qRef.option1.points}>{qRef.option1.answer}</option>
                             <option value={qRef.option2.points}>{qRef.option2.answer}</option>
                             <option value={qRef.option3.points}>{qRef.option3.answer}</option>
-                            <option value={qRef.option4.points}>{qRef.option4.answer}</option>
                         </select>
                   </div>
                 </div>
