@@ -26,3 +26,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+h1 {
+  font-family: Gotham Ultra, Arial;
+  color: red;
+}
+
+.app header {
+  background-color: white;
+}
+
+#cuntar {
+  display: flex;
+}
+
+img {
+  max-height: 400px;
+}

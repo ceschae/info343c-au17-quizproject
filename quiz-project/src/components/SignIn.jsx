@@ -44,7 +44,7 @@ export default class SignInView extends React.Component {
                     this.state.authenticated ? <Redirect to="/home" /> : undefined
                 }
 
-                <h1 className="text-primary">Sign In</h1>
+                <h1 >Sign In</h1>
                 
                 <form onSubmit={evt => this.handleSignIn(evt)}>
                     <div className="form-group"> 

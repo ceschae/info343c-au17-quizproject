@@ -9,15 +9,15 @@ import SignOutView from "./components/SignOut";
 import CreateQuiz from "./components/CreateQuiz";
 import Homepage from "./components/Homepage";
 import ProfileView from './components/Profile';
-
+import './components/App.css';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="jumbotron bg-dark">
-          <h1 className="text-primary display-3">Final Project</h1>
+        <header className="jumbotron">
+          <h1>Quiz Biz</h1>
         </header>
         <div className="container">
           <div className="row">
