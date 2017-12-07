@@ -18,23 +18,40 @@ export default class QuizView extends React.Component {
     }
 
     handleSubmit() {
-        let score = 0;
+        let countResults = [0, 0, 0];
         document.querySelectorAll(".answer").forEach(answer => {
-            score += parseInt(answer.value);
+            let value = answer.value;
+            if(value == 1) {
+                countResults[0]++;
+            } else if (value == 2) {
+                countResults[1]++;
+            } else {
+                countResults[2]++;
+            }
         });
+
+        console.log(countResults);
+
+        let resultIndex = 0;
+        let max = 0;
+        for(let i = 0; i < countResults.length; i++) {
+            if(countResults[i] > max) {
+                resultIndex = i;
+            }
+        }
 
         let resultRef = this.props.location.state.quizRef.quizDetails.results;
         let result = "";
-        if (score <= 13) { //result 1
+        if (resultIndex === 0) { //result 1
             result = resultRef.result1;
-        } else if (score <= 21) { //result 2
+        } else if (resultIndex === 2) { //result 2
             result = resultRef.result2;
         } else { //result 3
             result = resultRef.result3;
         }
 
         this.setState({
-            score: score,
+            resultIndex: resultIndex,
             done: true,
             description: result.description,
             imageUrl: result.imageUrl
@@ -80,8 +97,6 @@ export default class QuizView extends React.Component {
                 <Question number="3" qRef={quizRef.quizDetails.question3}/>
                 <Question number="4" qRef={quizRef.quizDetails.question4}/>
                 <Question number="5" qRef={quizRef.quizDetails.question5}/>
-                <Question number="6" qRef={quizRef.quizDetails.question6}/>
-                <Question number="7" qRef={quizRef.quizDetails.question7}/>
 
                 {
                     this.state.done ? 
