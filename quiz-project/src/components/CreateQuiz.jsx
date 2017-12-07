@@ -1,7 +1,7 @@
 import React from 'react';
 
 import QuizQuestionForm from "./QuizQuestionForm";
-
+import ResultForm from "./ResultForm";
 import firebase from 'firebase/app';
 
 export default class CreateQuiz extends React.Component {
@@ -11,15 +11,6 @@ export default class CreateQuiz extends React.Component {
             quizTitle: "",
             description: ""
         }
-    }
-
-    componentWillMount() {
-        firebase.database().ref("quizzes").on("value",
-            snapShot => this.setState({quizSnapshot: snapShot}));
-    }  
-
-    componentWillUnmount() {
-        firebase.database().ref("quizzes").off("value");
     }
 
     handleSubmit() {
@@ -174,23 +165,22 @@ export default class CreateQuiz extends React.Component {
                         points: document.querySelector("#question7 .points4").value
                     }
                 },
-            },
-            results: {
-                result1: {
-                    description: "",
-                    imageUrl: ""
-                },
-                result2: {
-                    description: "",
-                    imageUrl: ""
-                },
-                results3: {
-                    description: "",
-                    imageUrl: ""
+                results: {
+                    result1: {
+                        description: document.querySelector("#result1 .result").value,
+                        imageUrl: document.querySelector("#result1 .image").value
+                    },
+                    result2: {
+                        description: document.querySelector("#result2 .result").value,
+                        imageUrl: document.querySelector("#result2 .image").value
+                    },
+                    results3: {
+                        description: document.querySelector("#result3 .result").value,
+                        imageUrl: document.querySelector("#result3 .image").value
+                    }
                 }
             }
         });
-        
     }
 
 
@@ -213,6 +203,10 @@ export default class CreateQuiz extends React.Component {
         });*/
         return (
             <div id="quiz" className="w-100">
+                <p className="text-primary">There are 7 questions. All the fields are required and must be completed. Points
+                are assigned to each answer option for each question. This is used to calculate the 
+                algorithm to assign the proper results.
+                </p>
                 <div className="card">
                     <div className="card-body">
                         <h4 className="card-title">Quiz Title:</h4>
@@ -228,9 +222,17 @@ export default class CreateQuiz extends React.Component {
                     <QuizQuestionForm id={5}/>
                     <QuizQuestionForm id={6}/>
                     <QuizQuestionForm id={7}/>
+
+                    <p className="pt-4 text-primary">The algorithm has already been calculated based on the assigned point values for 
+                        each question's answer options. Enter a description and image assosiated with 
+                        the three possible outcomes.</p>
+
+                    <ResultForm id={1}/>
+                    <ResultForm id={2}/>
+                    <ResultForm id={3}/>
                 </div>
 
-                <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
+                <button type="button" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
                     onClick={() => this.handleSubmit()}>Submit!</button>
                 
             </div>
