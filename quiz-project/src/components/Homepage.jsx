@@ -40,7 +40,7 @@ export default class Homepage extends React.Component {
                             Quizzes</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/create" className="nav-link" onClick={()=>window.location.reload()}> Create</Link>
+                        <Link to="/create" className="nav-link"> Create</Link>
                     </li>
                     <li className="nav-item">
                         <Link to = "/profile" className="nav-link" > Profile</Link>
@@ -57,7 +57,7 @@ export default class Homepage extends React.Component {
                         case "#/profile": return <div className="container">
                                                      <ProfileView />
                                                 </div>;
-                        default: return <div>
+                        default: return <div className="row">
                                             {quizzes}
                                         </div>;
                     }

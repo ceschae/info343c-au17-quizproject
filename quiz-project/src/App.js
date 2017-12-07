@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="jumbotron bg-dark">
-          <h1 className="text-primary display-3">Final Project</h1>
+          <h1 className="text-primary display-3">Boozefeed Quizzes</h1>
         </header>
         <div className="container">
           <div className="row">
