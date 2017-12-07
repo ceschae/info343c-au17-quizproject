@@ -13,7 +13,7 @@ export default class QuizCard extends React.Component {
         return (
             <div className="col-12 col-sm-6 col-lg-4 col-xl-3 pb-3">
             <div className="card">
-                <img className="card-img-top img-thumbnail" style={style} src={quiz.quizDetails.results.result1.imageUrl} alt="Card image cap" />
+                <img className="card-img-top" style={style} src={quiz.quizDetails.results.result1.imageUrl} alt="Card image cap" />
                 <div className="card-body">
                     <h4 className="card-title">{quiz.quizDetails.title}</h4>
                     <div className="card-body">

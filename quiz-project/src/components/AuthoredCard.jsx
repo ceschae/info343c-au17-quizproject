@@ -6,8 +6,8 @@ import firebase from 'firebase/app';
 export default class AuthoredCard extends React.Component {
     render () {
         let quiz = this.props.quizSnapshot.val();
-        console.log(this.props.key);
         console.log(quiz);
+        console.log(this.props.quizSnapshot);
         return (
             <div className="container pb-3">
             <div className="card">
@@ -16,7 +16,7 @@ export default class AuthoredCard extends React.Component {
                     <p>{quiz.quizDetails.description}</p>
                         <button className="btn btn-outline-primary">
                         <Link to= {{
-                            pathname:'/quiz/' + this.props.key,
+                            pathname:'/quiz/' + this.props.quizSnapshot.key,
                             state: {quizRef: quiz}}}> 
                             Click here to take your quiz!</Link></button>
                 </div>
