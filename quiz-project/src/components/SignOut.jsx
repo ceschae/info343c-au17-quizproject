@@ -36,14 +36,9 @@ export default class SignOutView extends React.Component {
             <div>
                 {
                      this.state.authenticated ? undefined :
-                    <Router>
-                        <Route path="/" render={() => (
-                            <Redirect push to="/"/>
-                        )} />
-                    </Router>
-                  
-                }
-                <button className="btn btn-danger" onClick={evt => this.handleSignOut(evt)}>Sign Out!</button>
+                    <Redirect push to="/"/>
+                } 
+                <button className="btn btn-link text-danger" onClick={evt => this.handleSignOut(evt)}>Sign Out</button>
             </div>
 
         );
