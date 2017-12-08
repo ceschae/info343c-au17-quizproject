@@ -39,7 +39,7 @@ export default class QuizView extends React.Component {
             }
         }
 
-        let resultRef = this.props.location.state.quizRef.quizDetails.results;
+        let resultRef = this.state.quizRef.quizDetails.results;
         let result = "";
         if (resultIndex === 0) { //result 1
             result = resultRef.result1;
@@ -50,8 +50,11 @@ export default class QuizView extends React.Component {
         }
 
         //update quiz count
-        let newCount = this.props.location.state.quizRef.count + 1;
-        this.props.location.state.quizSnapshot.ref.update({count: newCount});
+        firebase.database().ref("quizzes/" + this.props.match.params.quizKey)
+        .once("value")
+        .then(snapshot => {
+            snapshot.ref.update({count: this.state.quizRef.count + 1})
+        });
 
         this.setState({
             resultIndex: resultIndex,
@@ -66,7 +69,7 @@ export default class QuizView extends React.Component {
     submitResult(description, image) {
         let resultsRef = firebase.database().ref("results");
         resultsRef.push({
-            quizTitle: this.props.location.state.quizRef.quizDetails.title,
+            quizTitle: this.state.quizRef.quizDetails.title,
             quizId: this.props.match.params.quizKey,
             result: {
                 description: description,
@@ -85,14 +88,13 @@ export default class QuizView extends React.Component {
         
         //referencing the database from the path's key
         //need this to avoid the error of losing the quizref when refreshing the page
-        let quizRef = "";
         firebase.database().ref("quizzes/" + this.props.match.params.quizKey)
         .once("value")
         .then(snapshot => {
-            quizRef = snapshot.val();
-            this.setState({quizRef: quizRef});
+            this.setState({quizRef: snapshot.val()});
         });
 
+        //takes a while to set the state to the snapshot so need this too
         if(!this.state.quizRef) {
             return <div>Loading... Please be patient</div>;
         }
