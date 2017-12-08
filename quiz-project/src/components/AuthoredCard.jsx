@@ -3,13 +3,12 @@ import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-route
 
 import firebase from 'firebase/app';
 
+import styles from "./Profile.css";
+
 export default class AuthoredCard extends React.Component {
     handleDelete() {
         let key = this.props.quizSnapshot.key;
         let results = firebase.database().ref("results").once('value').then(function(snapshot) {
-            /*snapshot.val().forEach(element => {
-                console.log(element);
-            });*/
             let results = snapshot.val();
             for (let propName in results) {
                 if (results[propName].quizId === key) {
@@ -42,8 +41,26 @@ export default class AuthoredCard extends React.Component {
                             pathname:'/quiz/' + this.props.quizSnapshot.key,
                             state: {quizRef: quiz}}}> 
                             Click here to take your quiz!</Link></button>
-                        <button className="btn btn-outline-danger"
-                        onClick={() => this.handleDelete()}>Delete Quiz</button>
+                        <button className="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">Delete Quiz</button>
+                </div>
+            </div>
+            <div className="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="deleteModalLabel">Confirm Delete Quiz</h5>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div className="modal-body">
+                        You're about to delete your quiz. The data can not be restored if deleted. Are you sure you want to delete your quiz?   
+                    </div>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={() => this.handleDelete()}>Confirm Delete</button>
+                    </div>
+                    </div>
                 </div>
             </div>
             </div>
