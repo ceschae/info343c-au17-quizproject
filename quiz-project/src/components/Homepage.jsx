@@ -4,6 +4,7 @@ import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-route
 import SignOutView from './SignOut';
 import ProfileView from './Profile';
 import QuizCard from './QuizCard';
+import AboutView from './About';
 
 import firebase from 'firebase/app';
 
@@ -11,7 +12,8 @@ export default class Homepage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            quizzesSnapshot: undefined
+            quizzesSnapshot: undefined,
+            authenticated: true
         }
     }
     componentWillMount() {
@@ -33,14 +35,13 @@ export default class Homepage extends React.Component {
         });   
         return (
             <div className="container">
-
             {
                 (() => {
                     switch(window.location.hash){
-                        case "#/create": return <div className="container">Create Quiz</div>;
                         case "#/profile": return <div className="container">
                                                      <ProfileView />
                                                 </div>;
+                        case "#/about": return <AboutView />
                         default: return <div className="row">
                                             {quizzes}
                                         </div>;
