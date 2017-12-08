@@ -20,29 +20,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      curUser: null,
-      quizzesSnapshot: undefined
+      curUser: null
     }
   }
   componentWillMount() {
     this.authUnsub = firebase.auth().onAuthStateChanged(user => {
         this.setState({curUser: user});
     });
-    firebase.database().ref("quizzes").on("value",
-    snapShot => this.setState({quizzesSnapshot: snapShot}));
 }
 
 componentWillUnmount() {
 this.authUnsub();
 }
   render() {
-    if(!this.state.quizzesSnapshot) {
-      return <div>Loading... Please be patient</div>;
-    }
-    let quizzes = [];
-    this.state.quizzesSnapshot.forEach(quizSnapshot => {
-        quizzes.push(<Route path={"/quiz/" + quizSnapshot.key} component={QuizView} />)
-    });
     return (
       <Router>
       <div className="App">
@@ -96,7 +86,6 @@ this.authUnsub();
                 <Route path={constants.routes.create} component={CreateQuiz} />
                 <Route path={constants.routes.about} component={Homepage} />
                 <Route component={SignInView} />
-                {quizzes}
               </Switch>
            
           </div>
