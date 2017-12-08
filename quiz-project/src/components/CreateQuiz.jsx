@@ -141,6 +141,13 @@ export default class CreateQuiz extends React.Component {
     render() {
         return (
             <div id="quiz" className="w-100">
+                <p className="text-primary pt-2">
+                    <strong className="text-danger">***All fields are required to submit the quiz.</strong>
+                    <br/>
+                    There are a total of 5 questions with 3 possible results. Using the drop down menu next to each question to 
+                    assign each question to the corresponding result. The algorithm has already been calculated to determine 
+                    the results for the user.
+                </p>
                 <div className="card mb-3">
                     <div className="card-body">
                         <h4 className="card-title">Quiz Title:</h4>
@@ -154,10 +161,6 @@ export default class CreateQuiz extends React.Component {
                     <ResultForm id={3}/>
                     <hr />
 
-                    <p className="text-primary pt-2">
-                        There are a total of 5 questions with 3 possible results. Using the drop down menu next to each question to 
-                        Assign each question to the corresponding
-                    </p>
                     <QuizQuestionForm id={1}/>
                     <QuizQuestionForm id={2}/>
                     <QuizQuestionForm id={3}/>

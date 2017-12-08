@@ -14,7 +14,7 @@ export default class AboutView extends React.Component {
         let url = "https://github.com";
         let appId = '134114333946019';
         return (
-            <div className="container"> 
+            <div className="container pb-5"> 
                 <h3 className="pb-3">About</h3>
                 <h5>What is Boozefeed?</h5>
                 <p>
@@ -25,19 +25,19 @@ export default class AboutView extends React.Component {
                 <h5>The Authors</h5>
                 <div className="row">
                     <div className="col text-center">
-                        <img style={style} src={claire} alt="Claire's picture"></img> 
+                        <img style={style} src={claire} alt="Claire's picture" className="rounded"></img> 
                         <div className="caption">
                             <p>Hyoju Claire Kim</p>
                         </div>
                     </div>
                     <div className="col text-center">
-                        <img src={cece} style={style} alt="Cece's picture"></img> 
+                        <img src={cece} style={style} alt="Cece's picture" className="rounded"></img> 
                         <div className="caption">
                             <p>Cecilia Vu</p>
                         </div>
                     </div>
                     <div className="col text-center">
-                        <img src={caitlin} style={style}  alt="Caitlin's picture"></img> 
+                        <img src={caitlin} style={style}  alt="Caitlin's picture" className="rounded"></img> 
                         <div className="caption">
                             <p>Caitlin Schaefer</p>
                         </div>
