@@ -13,7 +13,17 @@ export default class AboutView extends React.Component {
                 To view the quizzes you have taken or created, please navigate to the "Profile" page. 
                 </p>
                 <h5>The Authors</h5>
-                
+                <div className="row">
+                    <div className="col">
+                        <img src="../img/claire.jpg" alt="Claire's picture"></img> 
+                    </div>
+                    <div className="col">
+                        <img src="../img/cece.jpg" alt="Cece's picture"></img> 
+                    </div>
+                    <div className="col">
+                        <img src="../img/caitlin.jpg" alt="Caitlin's picture"></img> 
+                    </div>
+                </div>
             </div>
         );
     }
