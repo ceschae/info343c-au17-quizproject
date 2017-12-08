@@ -122,10 +122,10 @@ export default class CreateQuiz extends React.Component {
     render() {
         return (
             <div id="quiz" className="w-100">
-                <div className="card">
+                <div className="card mb-3">
                     <div className="card-body">
                         <h4 className="card-title">Quiz Title:</h4>
-                        <input className="form-control" placeholder="What should the quiz be called?" onInput={evt => this.setState({quizTitle: evt.target.value})}/>
+                        <input className="form-control mb-1" placeholder="What should the quiz be called?" onInput={evt => this.setState({quizTitle: evt.target.value})}/>
                         <input className="form-control" placeholder="Enter quiz description" onInput={evt => this.setState({description: evt.target.value})}/>
                     </div>
                 </div>
@@ -150,7 +150,7 @@ export default class CreateQuiz extends React.Component {
                     this.state.allDone ? 
                     <div>
                         <div className="alert alert-success" role="alert">Success! Your quiz has been stored successfully.</div>
-                        <button className="btn btn-primary btn-lg btn-block mb-5 mt-3"
+                        <button type ="submit" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
                         onClick={() => {window.location.hash = "/home"}}>
                         View All Quizzes</button>
                     </div> :

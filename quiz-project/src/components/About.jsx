@@ -1,6 +1,7 @@
 import React from 'react';
 import cece from '../img/cece.jpg';
 import claire from '../img/claire.jpg';
+import caitlin from '../img/caitlin.jpg';
 
 
 export default class AboutView extends React.Component {
@@ -33,7 +34,7 @@ export default class AboutView extends React.Component {
                         </div>
                     </div>
                     <div className="col text-center">
-                        <img src="../img/caitlin.jpg" style={style}  alt="Caitlin's picture"></img> 
+                        <img src={caitlin} style={style}  alt="Caitlin's picture"></img> 
                         <div className="caption">
                             <p>Caitlin Schaefer</p>
                         </div>
