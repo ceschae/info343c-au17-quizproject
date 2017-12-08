@@ -74,6 +74,11 @@ export default class QuizView extends React.Component {
 
     render () {
         let quizRef = this.props.location.state.quizRef;
+        let style = {
+            'objectFit': 'cover',
+            height: '250px', 
+            width: '300px'
+        }
         return (
             <div className="container">
                 <h1>{quizRef.quizDetails.title}</h1>
@@ -82,13 +87,13 @@ export default class QuizView extends React.Component {
                 <h5>{quizRef.quizDetails.description}</h5>
                 <div className="row m-2" id="cuntar">
                     <div className="crop col-xs-12 col-sm-4 col-md-4 ">
-                        <img src={quizRef.quizDetails.results.result1.imageUrl} className="img-thumbnail" />
+                        <img src={quizRef.quizDetails.results.result1.imageUrl} style={style} className="img-thumbnail" />
                     </div>
                     <div className="crop col-xs-12 col-sm-4 col-md-4 ">
-                        <img src={quizRef.quizDetails.results.result2.imageUrl} className="img-thumbnail" />
+                        <img src={quizRef.quizDetails.results.result2.imageUrl} style={style} className="img-thumbnail" />
                     </div>
                     <div className="crop col-xs-12 col-sm-4 col-md-4 ">
-                        <img src={quizRef.quizDetails.results.result3.imageUrl} className="img-thumbnail" />
+                        <img src={quizRef.quizDetails.results.result3.imageUrl} style={style} className="img-thumbnail" />
                     </div>
                 </div>
                 
