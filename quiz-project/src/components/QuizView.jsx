@@ -13,8 +13,7 @@ export default class QuizView extends React.Component {
             done: false,
             score: 7,
             description: "",
-            imageUrl: "",
-            quizRef: ""
+            imageUrl: ""
         }
     }
 
@@ -77,6 +76,12 @@ export default class QuizView extends React.Component {
     }
 
     render () {
+        let style = {
+            'objectFit': 'cover',
+            height: '250px', 
+            width: '300px'
+        }
+        
         //referencing the database from the path's key
         //need this to avoid the error of losing the quizref when refreshing the page
         let quizRef = "";
@@ -84,41 +89,37 @@ export default class QuizView extends React.Component {
         .once("value")
         .then(snapshot => {
             quizRef = snapshot.val();
-            console.log(quizRef);
+            this.setState({quizRef: quizRef});
         });
 
-        console.log(quizRef);
-        //it won't save agh
-
-        let style = {
-            'objectFit': 'cover',
-            height: '250px', 
-            width: '300px'
+        if(!this.state.quizRef) {
+            return <div>Loading... Please be patient</div>;
         }
+        
         return (
             <div className="container">
         
-                <h1>{quizRef.quizDetails.title}</h1>
-                <h4 className="pb-3">Quiz created by: {quizRef.author.displayName}</h4>
+                <h1>{this.state.quizRef.quizDetails.title}</h1>
+                <h4 className="pb-3">Quiz created by: {this.state.quizRef.author.displayName}</h4>
                 <hr />
-                <h5>{quizRef.quizDetails.description}</h5>
+                <h5>{this.state.quizRef.quizDetails.description}</h5>
                 <div className="row m-2" id="cuntar">
                     <div className="crop col-xs-12 col-sm-4 col-md-4 ">
-                        <img src={quizRef.quizDetails.results.result1.imageUrl} style={style} className="img-thumbnail" />
+                        <img src={this.state.quizRef.quizDetails.results.result1.imageUrl} style={style} className="img-thumbnail" />
                     </div>
                     <div className="crop col-xs-12 col-sm-4 col-md-4 ">
-                        <img src={quizRef.quizDetails.results.result2.imageUrl} style={style} className="img-thumbnail" />
+                        <img src={this.state.quizRef.quizDetails.results.result2.imageUrl} style={style} className="img-thumbnail" />
                     </div>
                     <div className="crop col-xs-12 col-sm-4 col-md-4 ">
-                        <img src={quizRef.quizDetails.results.result3.imageUrl} style={style} className="img-thumbnail" />
+                        <img src={this.state.quizRef.quizDetails.results.result3.imageUrl} style={style} className="img-thumbnail" />
                     </div>
                 </div>
                 
-                <Question number="1" qRef={quizRef.quizDetails.question1}/>
-                <Question number="2" qRef={quizRef.quizDetails.question2}/>
-                <Question number="3" qRef={quizRef.quizDetails.question3}/>
-                <Question number="4" qRef={quizRef.quizDetails.question4}/>
-                <Question number="5" qRef={quizRef.quizDetails.question5}/>
+                <Question number="1" qRef={this.state.quizRef.quizDetails.question1}/>
+                <Question number="2" qRef={this.state.quizRef.quizDetails.question2}/>
+                <Question number="3" qRef={this.state.quizRef.quizDetails.question3}/>
+                <Question number="4" qRef={this.state.quizRef.quizDetails.question4}/>
+                <Question number="5" qRef={this.state.quizRef.quizDetails.question5}/>
 
                 {
                     this.state.done ? 
@@ -128,7 +129,8 @@ export default class QuizView extends React.Component {
                     <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
                     onClick={() => this.handleSubmit()}>Submit!</button>
                 }
-            </div>
+                
+            </div>   
         );
     }
 }
