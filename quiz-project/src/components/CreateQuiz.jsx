@@ -10,13 +10,26 @@ export default class CreateQuiz extends React.Component {
         this.state = {
             quizTitle: "",
             description: "",
-            allDone: false
+            allDone: false,
+            missingFields: false
         }
     }
 
     handleSubmit() {
-        let quizzesRef = firebase.database().ref("quizzes"); // PUSH INTO THIS
+        //state missingFields isn't updating fast enough so need this variable
+        let canSubmit = true; //to determine if possible to submit. 
+
+        //make sure all fields are filled in
+        document.querySelectorAll("input").forEach(input => {
+            if(input.value === "") {
+                this.setState({missingFields: true});
+                canSubmit = false;
+            }
+        });
         
+        if(canSubmit) { 
+        let quizzesRef = firebase.database().ref("quizzes"); // PUSH INTO THIS
+
         quizzesRef.push({
             author: {
                 displayName: firebase.auth().currentUser.displayName,
@@ -118,6 +131,11 @@ export default class CreateQuiz extends React.Component {
             }
         });
         this.setState({ allDone: true });
+        }
+    }
+
+    submitResults() {
+
     }
 
     render() {
@@ -146,7 +164,17 @@ export default class CreateQuiz extends React.Component {
                     <QuizQuestionForm id={4}/>
                     <QuizQuestionForm id={5}/>
                 </div>
-
+                {
+                    this.state.missingFields && 
+                    <div className="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error:</strong> You should check in on some of those fields above.
+                        <button type="button" className="close" data-dismiss="alert" aria-label="Close"
+                            onClick={() => {this.setState({missingFields: false})}}>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                }
                 {
                     this.state.allDone ? 
                     <div>

@@ -13,7 +13,8 @@ export default class QuizView extends React.Component {
             done: false,
             score: 7,
             description: "",
-            imageUrl: ""
+            imageUrl: "",
+            quizRef: ""
         }
     }
 
@@ -76,7 +77,19 @@ export default class QuizView extends React.Component {
     }
 
     render () {
-        let quizRef = this.props.location.state.quizRef;
+        //referencing the database from the path's key
+        //need this to avoid the error of losing the quizref when refreshing the page
+        let quizRef = "";
+        firebase.database().ref("quizzes/" + this.props.match.params.quizKey)
+        .once("value")
+        .then(snapshot => {
+            quizRef = snapshot.val();
+            console.log(quizRef);
+        });
+
+        console.log(quizRef);
+        //it won't save agh
+
         let style = {
             'objectFit': 'cover',
             height: '250px', 
@@ -84,6 +97,7 @@ export default class QuizView extends React.Component {
         }
         return (
             <div className="container">
+        
                 <h1>{quizRef.quizDetails.title}</h1>
                 <h4 className="pb-3">Quiz created by: {quizRef.author.displayName}</h4>
                 <hr />

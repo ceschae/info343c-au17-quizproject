@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FacebookButton, FacebookCount } from "react-social";
+
 import logo from './logo.svg';
 import constants from "./components/constants";
 import QuizView from "./components/QuizView";
