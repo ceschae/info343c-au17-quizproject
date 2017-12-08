@@ -149,7 +149,7 @@ export default class CreateQuiz extends React.Component {
                 {
                     this.state.allDone ? 
                     <div>
-                        <div className="alert alert-success" role="alert">Success! Your quiz has been stored successfully.</div>
+                        <div className="alert alert-success my-3" role="alert">Success! Your quiz has been stored successfully.</div>
                         <button type ="submit" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
                         onClick={() => {window.location.hash = "/home"}}>
                         View All Quizzes</button>

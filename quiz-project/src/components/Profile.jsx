@@ -47,7 +47,7 @@ export default class ProfileView extends React.Component {
         });
         return (
             <div>
-                <h3>Profile</h3>
+                <h2>Profile</h2>
                 <p><strong>Display Name: </strong> {this.state.curUser.displayName}</p>
                 <p><strong>Email: </strong>{this.state.curUser.email}</p>
                 <div>
