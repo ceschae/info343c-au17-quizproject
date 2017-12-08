@@ -17,6 +17,7 @@ export default class QuizView extends React.Component {
         }
     }
 
+    // The algorithm for determining the result
     handleSubmit() {
         let countResults = [0, 0, 0];
         document.querySelectorAll(".answer").forEach(answer => {
@@ -29,8 +30,6 @@ export default class QuizView extends React.Component {
                 countResults[2]++;
             }
         });
-
-        console.log(countResults);
 
         let resultIndex = 0;
         let max = 0;
@@ -49,6 +48,10 @@ export default class QuizView extends React.Component {
         } else { //result 3
             result = resultRef.result3;
         }
+
+        //update quiz count
+        let newCount = this.props.location.state.quizRef.count + 1;
+        this.props.location.state.quizSnapshot.ref.update({count: newCount});
 
         this.setState({
             resultIndex: resultIndex,

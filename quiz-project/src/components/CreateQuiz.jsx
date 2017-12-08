@@ -22,6 +22,7 @@ export default class CreateQuiz extends React.Component {
                 displayName: firebase.auth().currentUser.displayName,
                 uid: firebase.auth().currentUser.uid
             },
+            count: 0,
             quizDetails: {
                 description: this.state.description,
                 title: this.state.quizTitle,
