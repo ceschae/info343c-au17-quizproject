@@ -3,6 +3,7 @@ import cece from '../img/cece.jpg';
 import claire from '../img/claire.jpg';
 import caitlin from '../img/caitlin.jpg';
 
+import { FacebookButton, FacebookCount } from "react-social";
 
 export default class AboutView extends React.Component {
     render() {
@@ -10,6 +11,8 @@ export default class AboutView extends React.Component {
             'objectFit': 'cover',
              height: '250px'
         }
+        let url = "https://github.com";
+        let appId = '134114333946019';
         return (
             <div className="container"> 
                 <h3 className="pb-3">About</h3>
@@ -39,6 +42,13 @@ export default class AboutView extends React.Component {
                             <p>Caitlin Schaefer</p>
                         </div>
                     </div>
+                </div>
+                <div className="container">
+                <br></br>
+                <h6>Want to share this website to your friends? Click below to share!</h6>
+                <FacebookButton url={url} appId={appId} className="btn btn-primary btn-sm">
+                        Share to Facebook
+                </FacebookButton>
                 </div>
             </div>
         );
