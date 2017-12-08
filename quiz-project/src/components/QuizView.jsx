@@ -87,12 +87,10 @@ export default class QuizView extends React.Component {
         
         //referencing the database from the path's key
         //need this to avoid the error of losing the quizref when refreshing the page
-        let quizRef = "";
         firebase.database().ref("quizzes/" + this.props.match.params.quizKey)
         .once("value")
         .then(snapshot => {
-            quizRef = snapshot.val();
-            this.setState({quizRef: quizRef});
+            this.setState({quizRef: snapshot.val()});
         });
 
         //takes a while to set the state to the snapshot so need this too
