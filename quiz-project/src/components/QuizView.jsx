@@ -70,6 +70,7 @@ export default class QuizView extends React.Component {
         let resultsRef = firebase.database().ref("results");
         resultsRef.push({
             quizTitle: this.state.quizRef.quizDetails.title,
+            quizId: this.props.match.params.quizKey,
             result: {
                 description: description,
                 imageUrl: image

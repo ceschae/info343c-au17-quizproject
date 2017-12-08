@@ -2,6 +2,11 @@ import React from 'react';
 import firebase from 'firebase/app';
 import ResultCard from "./ResultCard";
 import AuthoredCard from "./AuthoredCard";
+import constants from "./constants";
+
+import styles from "./Profile.css";
+
+import { HashRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 
 export default class ProfileView extends React.Component {
     constructor(props) {
@@ -31,6 +36,9 @@ export default class ProfileView extends React.Component {
         if(!this.state.quizzesSnapshot) {
             return <div>Loading... Please be patient</div>;
         }
+        if(!this.state.authoredSnapshot) {
+            return <div>Loading... Please be patient</div>;
+        }
         let quizzes= [];
         this.state.quizzesSnapshot.forEach(quizSnapshot => {
             (quizSnapshot.val().uid === this.state.curUser.uid) ?
@@ -47,21 +55,33 @@ export default class ProfileView extends React.Component {
         });
         return (
             <div>
-                <h2>Profile</h2>
+                <h2>Your Profile</h2>
                 <p><strong>Display Name: </strong> {this.state.curUser.displayName}</p>
                 <p><strong>Email: </strong>{this.state.curUser.email}</p>
-                <div>
-                    <h4>Quizzes You've Taken:</h4>
-                    <div className="row">
-                        {quizzes}
+                { quizzes.length === 0 ?
+                    <div className="profile-section">
+                        <h4>It looks like you haven't taken any quizzes! Want to?</h4>
+                        <button className="btn btn-outline-primary"><Link to={constants.routes.home} className="nav-link">Quizzes</Link></button>
+                    </div> :
+                    <div className="profile-section">
+                        <h4>Quizzes You've Taken:</h4>
+                        <div className="row">
+                            {quizzes}
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h4>Quizzes You've Written:</h4>
-                    <div className="row">
-                        {authored}
+                }
+                { authored.length === 0 ?
+                    <div className="profile-section">
+                        <h4>It looks like you haven't written any quizzes! Want to?</h4>
+                        <button className="btn btn-outline-primary"><Link to={constants.routes.create} className="nav-link">Create</Link></button>
+                    </div> :
+                    <div className="profile-section">
+                        <h4>Quizzes You've Written:</h4>
+                        <div className="row">
+                            {authored}
+                        </div>
                     </div>
-                </div>
+                }
             </div>
         )
     }
