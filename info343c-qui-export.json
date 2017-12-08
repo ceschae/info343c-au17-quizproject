@@ -163,7 +163,7 @@
         "displayName" : "Cece",
         "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
       },
-      "count" : 2,
+      "count" : 3,
       "quizDetails" : {
         "count" : 1,
         "description" : "Take this quiz to figure out the kind of drunk mess you are on a fun night out ;)",
@@ -562,52 +562,7 @@
       },
       "uid" : "i7t5NdsLUjTZMgjl1vQqglkPm3w1"
     },
-    "-L-s42AMcb-VQzZPNASv" : {
-      "quizId" : "-L-jfAk4O5os93gR_uDH",
-      "quizTitle" : "What kind of pizza are you?",
-      "result" : {
-        "description" : "You are a very normal cheesy pizza!",
-        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
-      },
-      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
-    },
-    "-L-s4eTjp6nQ7-X4gb1K" : {
-      "quizId" : "-L-jfAk4O5os93gR_uDH",
-      "quizTitle" : "What kind of pizza are you?",
-      "result" : {
-        "description" : "You are a very normal cheesy pizza!",
-        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
-      },
-      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
-    },
-    "-L-s4jDxb9KkeirL62OQ" : {
-      "quizId" : "-L-jfAk4O5os93gR_uDH",
-      "quizTitle" : "What kind of pizza are you?",
-      "result" : {
-        "description" : "You are a very normal cheesy pizza!",
-        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
-      },
-      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
-    },
     "-L-s58riM1GPuhIRM2_9" : {
-      "quizId" : "-L-jfAk4O5os93gR_uDH",
-      "quizTitle" : "What kind of pizza are you?",
-      "result" : {
-        "description" : "You are a very normal cheesy pizza!",
-        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
-      },
-      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
-    },
-    "-L-s6rLX8y0vwpsK1Uh2" : {
-      "quizId" : "-L-jfAk4O5os93gR_uDH",
-      "quizTitle" : "What kind of pizza are you?",
-      "result" : {
-        "description" : "You are a very normal cheesy pizza!",
-        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
-      },
-      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
-    },
-    "-L-s702nXBsTonvvDjnw" : {
       "quizId" : "-L-jfAk4O5os93gR_uDH",
       "quizTitle" : "What kind of pizza are you?",
       "result" : {
@@ -624,14 +579,6 @@
         "imageUrl" : "https://images-production.global.ssl.fastly.net/uploads/posts/image/142646/are-french-fries-good-for-you.jpg?auto=compress&crop=faces,top&fit=crop&h=562&q=55&w=750"
       },
       "uid" : "i7t5NdsLUjTZMgjl1vQqglkPm3w1"
-    },
-    "-L-s8kYiwXcvWLcRD0_7" : {
-      "quizTitle" : "What kind of pizza are you?",
-      "result" : {
-        "description" : "You are a very normal cheesy pizza!",
-        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
-      },
-      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
     }
   }
 }
