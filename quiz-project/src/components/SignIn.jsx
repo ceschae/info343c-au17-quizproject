@@ -44,7 +44,7 @@ export default class SignInView extends React.Component {
                     this.state.authenticated ? <Redirect to="/home" /> : <Redirect to="/" />
                 }
 
-                <h1 >Sign In</h1>
+                <h1 className="text-secondary">Sign In</h1>
                 
                 <form onSubmit={evt => this.handleSignIn(evt)}>
                     <div className="form-group"> 
@@ -58,10 +58,10 @@ export default class SignInView extends React.Component {
                         onInput={evt => this.setState({password: evt.target.value})} required/>    
                     </div>
                     <div className="form-group">
-                        <button type="submit" className="btn btn-primary">Sign In!</button>
+                        <button type="submit" className="btn btn-secondary">Sign In!</button>
                     </div>
                 </form>
-                <p>Don't yet have an account? <Link to={constants.routes.signup}>Sign Up!</Link></p>
+                <p>Don't yet have an account? <Link className="text-danger" to={constants.routes.signup}>Sign Up!</Link></p>
             </div>
       ) 
     }

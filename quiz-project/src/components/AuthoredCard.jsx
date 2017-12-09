@@ -21,8 +21,6 @@ export default class AuthoredCard extends React.Component {
 
     render () {
         let quiz = this.props.quizSnapshot.val();
-        console.log(quiz);
-        console.log(this.props.quizSnapshot);
         let stats = "" + quiz.count + " ";
         if (quiz.count === 1) {
             stats += "person has";
@@ -44,7 +42,7 @@ export default class AuthoredCard extends React.Component {
                         <button className="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">Delete Quiz</button>
                 </div>
             </div>
-            <div className="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div className="modal fade" id="deleteModal" tabIndex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                     <div className="modal-header">

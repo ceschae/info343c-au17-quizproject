@@ -16,7 +16,13 @@ export default class QuizView extends React.Component {
             imageUrl: ""
         }
     }
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
 
+    componentWillUnmount() {
+        firebase.database().ref("quizzes/" + this.props.match.params.quizKey).off("value");
+    }
     // The algorithm for determining the result
     handleSubmit() {
         let countResults = [0, 0, 0];
@@ -86,7 +92,7 @@ export default class QuizView extends React.Component {
             width: '300px'
         }
         
-        //referencing the database from the path's key
+        //referencing the database locally from the path's key
         //need this to avoid the error of losing the quizref when refreshing the page
         firebase.database().ref("quizzes/" + this.props.match.params.quizKey)
         .once("value")
@@ -98,7 +104,6 @@ export default class QuizView extends React.Component {
         if(!this.state.quizRef) {
             return <div>Loading... Please be patient</div>;
         }
-        
         return (
             <div className="container">
         
@@ -127,7 +132,7 @@ export default class QuizView extends React.Component {
                 {
                     this.state.done ? 
                     <Results description={this.state.description} 
-                        image={this.state.imageUrl} />
+                        image={this.state.imageUrl}/>
                     :
                     <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
                     onClick={() => this.handleSubmit()}>Submit!</button>
