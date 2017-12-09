@@ -10,8 +10,9 @@ export default class Results extends React.Component {
     componentDidMount() {
         window.scrollTo(0,document.body.scrollHeight);        
     }
+    
     render() {
-        let url = "https://ceschae.github.io/info343c-au17-quizproject/quiz-project/#/quiz/"+this.props.thekey;
+        let url = window.location.href;
         let appId = '134114333946019';
         return (
             <div className="card mb-5">
