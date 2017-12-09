@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { FacebookButton, FacebookCount } from "react-social";
-
 import logo from './logo.svg';
 import constants from "./components/constants";
 import QuizView from "./components/QuizView";
@@ -39,7 +37,7 @@ this.authUnsub();
         {
          (firebase.auth().currentUser) ? 
          <nav className="navbar navbar-expand-md navbar-light bg-faded">
-         <a className="navbar-brand" href="#">
+         <a className="navbar-brand text-danger" href="#">
            <img src="https://png.icons8.com/food-and-wine-filled/ios7/40/000000" width="30" height="30" className="d-inline-block align-top pr-2" alt="pic"></img>
              Boozefeed
          </a>
@@ -72,7 +70,7 @@ this.authUnsub();
          undefined
        }
           <header className="jumbotron">
-          <h1 className="text-primary text-dark display-3">Boozefeed Quizzes</h1>
+          <h1 className="text-dark display-3">Boozefeed Quizzes</h1>
           </header>
         <div className="container">
           <div className="row">

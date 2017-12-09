@@ -16,7 +16,9 @@ export default class QuizView extends React.Component {
             imageUrl: ""
         }
     }
-
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
     // The algorithm for determining the result
     handleSubmit() {
         let countResults = [0, 0, 0];

@@ -48,7 +48,7 @@ export default class QuizQuestionForm extends React.Component {
                                     <option value="3">Result 3</option>
                                 </select>
                             </div>
-                            <div className="col pl-1">
+                            <div className="col pl-0">
                                 <input className="form-control answer3" placeholder="Answer Option 3" />    
                             </div>             
                         </div>
