@@ -14,10 +14,14 @@ export default class Results extends React.Component {
     render() {
         let url = window.location.href;
         let appId = '134114333946019';
+        let style = {
+            'objectFit': 'cover',
+            height: '400px'
+        }
         return (
             <div className="card mb-5">
                 <div className="card-body">
-                    <img className="card-img-top mb-3" src={this.props.image} />
+                    <img className="card-img-top mb-3" style={style} src={this.props.image} />
                     <h4 className="card-title">{this.props.description}</h4>
                     <p>Share this quiz with your friends!</p>
                     <FacebookButton url={url} appId={appId} className="btn btn-primary btn-sm mb-2">
