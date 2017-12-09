@@ -83,7 +83,7 @@ export default class QuizView extends React.Component {
         let style = {
             'objectFit': 'cover',
             height: '250px', 
-            width: '300px'
+            width: '350px'
         }
         
         //referencing the database from the path's key
