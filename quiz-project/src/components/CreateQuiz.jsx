@@ -14,7 +14,9 @@ export default class CreateQuiz extends React.Component {
             missingFields: false
         }
     }
-
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
     handleSubmit() {
         //state missingFields isn't updating fast enough so need this variable
         let canSubmit = true; //to determine if possible to submit. 
@@ -137,27 +139,27 @@ export default class CreateQuiz extends React.Component {
     render() {
         return (
             <div id="quiz" className="w-100">
-                <p className="text-primary pt-2">
-                    <strong className="text-danger">***All fields are required to submit the quiz.</strong>
+                <p className="text-secondary pt-2">
+                    <strong className="text-danger">All fields are required to submit the quiz.</strong>
                     <br/>
                     There are a total of 5 questions with 3 possible results. Using the drop down menu next to each question to 
                     assign each question to the corresponding result. The algorithm has already been calculated to determine 
                     the results for the user. If you do not provide an image, or the URL is/becomes broken, a default image will 
                     be provided to you.
                 </p>
-                <div className="card mb-3">
+                <div className="card mb-4">
                     <div className="card-body">
-                        <h4 className="card-title">Quiz Title:</h4>
+                        <h4 className="card-title pt-0">Quiz Title:</h4>
                         <input className="form-control mb-1" placeholder="What should the quiz be called?" onInput={evt => this.setState({quizTitle: evt.target.value})}/>
                         <input className="form-control" placeholder="Enter quiz description" onInput={evt => this.setState({description: evt.target.value})}/>
                     </div>
                 </div>
-                <div className="w-100">
+                <div className="w-100 mb-4">
                     <ResultForm id={1}/>
                     <ResultForm id={2}/>
                     <ResultForm id={3}/>
-                    <hr />
-
+                </div>
+                <div className="w-100">
                     <QuizQuestionForm id={1}/>
                     <QuizQuestionForm id={2}/>
                     <QuizQuestionForm id={3}/>
@@ -167,7 +169,7 @@ export default class CreateQuiz extends React.Component {
                 {
                     this.state.missingFields && 
                     <div className="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong>Error:</strong> You should check in on some of those fields above.
+                        <strong>Error:</strong> All fields are required to submit the quiz.
                         <button type="button" className="close" data-dismiss="alert" aria-label="Close"
                             onClick={() => {this.setState({missingFields: false})}}>
                             <span aria-hidden="true">&times;</span>
@@ -179,11 +181,11 @@ export default class CreateQuiz extends React.Component {
                     this.state.allDone ? 
                     <div>
                         <div className="alert alert-success my-3" role="alert">Success! Your quiz has been stored successfully.</div>
-                        <button type ="submit" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
+                        <button type ="submit" className="btn btn-success btn-lg btn-block mb-5 mt-3"
                         onClick={() => {window.location.hash = "/home"}}>
                         View All Quizzes</button>
                     </div> :
-                    <button type="button" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
+                    <button type="button" className="btn btn-secondary btn-lg btn-block mb-5 mt-3"
                     onClick={() => this.handleSubmit()}>Submit!</button>
                 }
             </div>

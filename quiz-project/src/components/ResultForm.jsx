@@ -13,7 +13,7 @@ export default class ResultForm extends React.Component {
     }
 
     handleTest() {
-
+        
     }
 
     render() {
