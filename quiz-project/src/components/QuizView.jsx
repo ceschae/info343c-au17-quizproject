@@ -13,14 +13,19 @@ export default class QuizView extends React.Component {
             done: false,
             score: 7,
             description: "",
-            imageUrl: ""
+            imageUrl: "",
+            curUser: true
         }
     }
     componentDidMount () {
         window.scrollTo(0, 0)
+        this.authUnsub = firebase.auth().onAuthStateChanged(user => {
+            this.setState({curUser: user});
+        });
     }
 
     componentWillUnmount() {
+        this.authUnsub();        
         firebase.database().ref("quizzes/" + this.props.match.params.quizKey).off("value");
     }
     // The algorithm for determining the result
@@ -86,6 +91,9 @@ export default class QuizView extends React.Component {
     }
 
     render () {
+        if(!this.state.curUser) {
+            return <Redirect push to ="/signin"/>;
+        }
         let style = {
             'objectFit': 'cover',
             height: '250px', 
