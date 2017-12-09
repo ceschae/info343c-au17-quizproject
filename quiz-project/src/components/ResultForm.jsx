@@ -9,7 +9,7 @@ export default class ResultForm extends React.Component {
             <form>
                 <div className="card mb-1">
                     <div className="card-body" id={result}>
-                        <h4 className="card-title">Result {this.props.id}:</h4>
+                        <h5 className="card-title">Result {this.props.id}:</h5>
                         <input className="form-control result mb-1" placeholder="Result description"/>
                         <input className="form-control image" placeholder="Image URL for this result" />
                     </div>
