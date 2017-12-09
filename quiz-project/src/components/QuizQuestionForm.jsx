@@ -13,7 +13,7 @@ export default class QuizQuestionForm extends React.Component {
             <form>
                 <div className="card mb-2">
                     <div className="card-body" id={question}>
-                        <h4 className="card-title">Question {this.props.id}:</h4>
+                        <h5 className="card-title">Question {this.props.id}:</h5>
                         <input className="form-control question mb-1" placeholder="What question should the user answer?" 
                             />
                         <div className="row mb-1">
