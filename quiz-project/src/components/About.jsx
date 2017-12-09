@@ -2,7 +2,7 @@ import React from 'react';
 import cece from '../img/cece.jpg';
 import claire from '../img/claire.jpg';
 import caitlin from '../img/caitlin.jpg';
-
+import { Share } from 'react-twitter-widgets'
 import { FacebookButton, FacebookCount } from "react-social";
 
 export default class AboutView extends React.Component {
@@ -11,7 +11,7 @@ export default class AboutView extends React.Component {
             'objectFit': 'cover',
              height: '250px'
         }
-        let url = "https://github.com";
+        let url = "https://ceschae.github.io/info343c-au17-quizproject/quiz-project/#";
         let appId = '134114333946019';
         return (
             <div className="container pb-5"> 
@@ -46,9 +46,10 @@ export default class AboutView extends React.Component {
                 <div className="container">
                 <br></br>
                 <h6>Want to share this website to your friends? Click below to share!</h6>
-                <FacebookButton url={url} appId={appId} className="btn btn-primary btn-sm">
-                        Share to Facebook
+                <FacebookButton url={url} appId={appId} className="btn btn-primary btn-sm mb-2">
+                <i className="fa fa-facebook-square"></i> Share
                 </FacebookButton>
+                <Share url={url}></Share>
                 </div>
             </div>
         );

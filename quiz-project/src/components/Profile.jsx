@@ -55,7 +55,7 @@ export default class ProfileView extends React.Component {
         });
         return (
             <div>
-                <h2>Your Profile</h2>
+                <h2 className="text-danger">Your Profile</h2>
                 <p><strong>Display Name: </strong> {this.state.curUser.displayName}</p>
                 <p><strong>Email: </strong>{this.state.curUser.email}</p>
                 { quizzes.length === 0 ?
