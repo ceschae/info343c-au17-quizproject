@@ -19,6 +19,10 @@ export default class QuizView extends React.Component {
     componentDidMount () {
         window.scrollTo(0, 0)
     }
+
+    componentWillUnmount() {
+        firebase.database().ref("quizzes/" + this.props.match.params.quizKey).off("value");
+    }
     // The algorithm for determining the result
     handleSubmit() {
         let countResults = [0, 0, 0];
@@ -88,7 +92,7 @@ export default class QuizView extends React.Component {
             width: '300px'
         }
         
-        //referencing the database from the path's key
+        //referencing the database locally from the path's key
         //need this to avoid the error of losing the quizref when refreshing the page
         firebase.database().ref("quizzes/" + this.props.match.params.quizKey)
         .once("value")
