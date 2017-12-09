@@ -6,8 +6,6 @@ import firebase from 'firebase/app';
 export default class AuthoredCard extends React.Component {
     render () {
         let quiz = this.props.quizSnapshot.val();
-        console.log(quiz);
-        console.log(this.props.quizSnapshot);
         return (
             <div className="container pb-3">
             <div className="card">
