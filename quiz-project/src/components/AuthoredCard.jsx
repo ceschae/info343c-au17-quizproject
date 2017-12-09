@@ -44,7 +44,7 @@ export default class AuthoredCard extends React.Component {
                         <button className="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">Delete Quiz</button>
                 </div>
             </div>
-            <div className="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div className="modal fade" id="deleteModal" tabIndex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                     <div className="modal-header">

@@ -61,7 +61,7 @@ this.authUnsub();
            </ul>
            <ul className="navbar-nav ml-auto">
              <li>
-               <Link to={constants.routes.signin} className="nav-link" onClick={() => firebase.auth().signOut()}>Sign Out</Link>
+               <Link to={constants.routes.signin} className="nav-link text-danger" onClick={() => firebase.auth().signOut()}>Sign Out</Link>
              </li>
            </ul>
          </div>
