@@ -1,0 +1,584 @@
+{
+  "quizzes" : {
+    "-L-jfAk4O5os93gR_uDH" : {
+      "author" : {
+        "displayName" : "Caitlin",
+        "uid" : "i7t5NdsLUjTZMgjl1vQqglkPm3w1"
+      },
+      "count" : 1,
+      "quizDetails" : {
+        "description" : "Find out now! ",
+        "question1" : {
+          "option1" : {
+            "answer" : "Meat",
+            "points" : "15"
+          },
+          "option2" : {
+            "answer" : "Vegetables",
+            "points" : "10"
+          },
+          "option3" : {
+            "answer" : "Just Cheese",
+            "points" : "5"
+          },
+          "option4" : {
+            "answer" : "I literally have all the allergies",
+            "points" : "1"
+          },
+          "question" : "What kind of food do you eat?"
+        },
+        "question2" : {
+          "option1" : {
+            "answer" : "Once a week",
+            "points" : "15"
+          },
+          "option2" : {
+            "answer" : "Once every few days",
+            "points" : "10"
+          },
+          "option3" : {
+            "answer" : "Once a day",
+            "points" : "5"
+          },
+          "option4" : {
+            "answer" : "Twice a day",
+            "points" : "1"
+          },
+          "question" : "How often do you shower?"
+        },
+        "question3" : {
+          "option1" : {
+            "answer" : "All of them ",
+            "points" : "15"
+          },
+          "option2" : {
+            "answer" : "Lacrosse",
+            "points" : "10"
+          },
+          "option3" : {
+            "answer" : "Tennis",
+            "points" : "5"
+          },
+          "option4" : {
+            "answer" : "Jogging",
+            "points" : "1"
+          },
+          "question" : "What kind of sports do you like to play?"
+        },
+        "question4" : {
+          "option1" : {
+            "answer" : "\"Dang straight!\"",
+            "points" : "15"
+          },
+          "option2" : {
+            "answer" : "\"Thank you so much!\"",
+            "points" : "10"
+          },
+          "option3" : {
+            "answer" : "\"Oh gosh, but look at your <thing they complimented about you>!\"",
+            "points" : "5"
+          },
+          "option4" : {
+            "answer" : "\"Oh gosh, well, oh boy, that's so...\"",
+            "points" : "1"
+          },
+          "question" : "If someone compliments you, how do you react?"
+        },
+        "question5" : {
+          "option1" : {
+            "answer" : "Ring",
+            "points" : "15"
+          },
+          "option2" : {
+            "answer" : "a ",
+            "points" : "10"
+          },
+          "option3" : {
+            "answer" : "Ding",
+            "points" : "5"
+          },
+          "option4" : {
+            "answer" : "Dingg",
+            "points" : "1"
+          },
+          "question" : "What does the fox say?"
+        },
+        "question6" : {
+          "option1" : {
+            "answer" : "iPhone",
+            "points" : "15"
+          },
+          "option2" : {
+            "answer" : "Android",
+            "points" : "10"
+          },
+          "option3" : {
+            "answer" : "Blackberry",
+            "points" : "5"
+          },
+          "option4" : {
+            "answer" : "I'm off the grid actually",
+            "points" : "1"
+          },
+          "question" : "What kind of phone do you have?"
+        },
+        "question7" : {
+          "option1" : {
+            "answer" : "YES",
+            "points" : "15"
+          },
+          "option2" : {
+            "answer" : "Uhh",
+            "points" : "10"
+          },
+          "option3" : {
+            "answer" : "Maybe",
+            "points" : "5"
+          },
+          "option4" : {
+            "answer" : "Definitely not",
+            "points" : "1"
+          },
+          "question" : "Do you feel that this was a good use of your time?"
+        },
+        "results" : {
+          "result1" : {
+            "description" : "YOU ARE A FULLY LOADED PIZZA",
+            "imageUrl" : "https://images-gmi-pmc.edge-generalmills.com/ceb0abbc-1901-446d-8044-6bfacc783cd3.jpg"
+          },
+          "result2" : {
+            "description" : "You are a very normal cheesy pizza!",
+            "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
+          },
+          "result3" : {
+            "description" : "You prefer salads.",
+            "imageUrl" : "https://www.budgetbytes.com/wp-content/uploads/2017/03/Super-Fresh-Salad-front.jpg"
+          }
+        },
+        "title" : "What kind of pizza are you?"
+      }
+    },
+    "-L-mmoRcDdp5Vw85E8nO" : {
+      "author" : {
+        "displayName" : "Cece",
+        "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
+      },
+      "count" : 3,
+      "quizDetails" : {
+        "count" : 1,
+        "description" : "Take this quiz to figure out the kind of drunk mess you are on a fun night out ;)",
+        "question1" : {
+          "option1" : {
+            "answer" : "Britney Spears",
+            "points" : "1"
+          },
+          "option2" : {
+            "answer" : "Sam Smith",
+            "points" : "3"
+          },
+          "option3" : {
+            "answer" : "Gordon Ramsey",
+            "points" : "3"
+          },
+          "question" : "Pick a celebrity to get drunk with"
+        },
+        "question2" : {
+          "option1" : {
+            "answer" : "AMF",
+            "points" : "3"
+          },
+          "option2" : {
+            "answer" : "Jager Bomb",
+            "points" : "1"
+          },
+          "option3" : {
+            "answer" : "Beer",
+            "points" : "2"
+          },
+          "question" : "Pick a drink"
+        },
+        "question3" : {
+          "option1" : {
+            "answer" : "Anything that will make me cry",
+            "points" : "3"
+          },
+          "option2" : {
+            "answer" : "HIP HOPPPPP",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "ROCK ON BRO",
+            "points" : "1"
+          },
+          "question" : "Music???"
+        },
+        "question4" : {
+          "option1" : {
+            "answer" : "Drink at the bar all night long",
+            "points" : "1"
+          },
+          "option2" : {
+            "answer" : "On the dance floor",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "In the corner",
+            "points" : "3"
+          },
+          "question" : "What would you most likely do at the club?"
+        },
+        "question5" : {
+          "option1" : {
+            "answer" : "A car",
+            "points" : "1"
+          },
+          "option2" : {
+            "answer" : "Food",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "I never feel like stealing",
+            "points" : "3"
+          },
+          "question" : "What would you steal if you were drunk?"
+        },
+        "results" : {
+          "result1" : {
+            "description" : "The one that blacks out and cuddles the toilet all night",
+            "imageUrl" : "http://i.imgur.com/XI9b92N.jpg"
+          },
+          "result2" : {
+            "description" : "The one that's always hungry",
+            "imageUrl" : "https://images-production.global.ssl.fastly.net/uploads/posts/image/142646/are-french-fries-good-for-you.jpg?auto=compress&crop=faces,top&fit=crop&h=562&q=55&w=750"
+          },
+          "result3" : {
+            "description" : "The one that starts crying and wants to call her ex boyfriend",
+            "imageUrl" : "http://evolutionaryparenting.com/wp-content/uploads/2011/10/Baby_Cries2.jpg"
+          }
+        },
+        "title" : "What kind of drunk are you?"
+      }
+    },
+    "-L-oixScBRckSMEuNF_9" : {
+      "author" : {
+        "displayName" : "Tester",
+        "uid" : "tKSmypBIEjQPwKowua5yU0BZRwK2"
+      },
+      "count" : 2,
+      "quizDetails" : {
+        "count" : 1,
+        "description" : "Find out which Gossip Girl character you are!",
+        "question1" : {
+          "option1" : {
+            "answer" : "Headband, duh.",
+            "points" : "2"
+          },
+          "option2" : {
+            "answer" : "Money",
+            "points" : "1"
+          },
+          "option3" : {
+            "answer" : "Girls",
+            "points" : "1"
+          },
+          "question" : "Which accessory is a must?"
+        },
+        "question2" : {
+          "option1" : {
+            "answer" : "Getting into colleges because you come from a well-known family.",
+            "points" : "3"
+          },
+          "option2" : {
+            "answer" : "Your parents",
+            "points" : "1"
+          },
+          "option3" : {
+            "answer" : "Imitators",
+            "points" : "2"
+          },
+          "question" : "What do you dislike most?"
+        },
+        "question3" : {
+          "option1" : {
+            "answer" : "Scotch",
+            "points" : "1"
+          },
+          "option2" : {
+            "answer" : "Beer",
+            "points" : "3"
+          },
+          "option3" : {
+            "answer" : "Gin Martini",
+            "points" : "2"
+          },
+          "question" : "Favorite drink?"
+        },
+        "question4" : {
+          "option1" : {
+            "answer" : "Working through boy/girl problems",
+            "points" : "3"
+          },
+          "option2" : {
+            "answer" : "Eating macarons in Paris",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "Drinking",
+            "points" : "1"
+          },
+          "question" : "It's Friday night. What are you doing?"
+        },
+        "question5" : {
+          "option1" : {
+            "answer" : "Ambitious",
+            "points" : "1"
+          },
+          "option2" : {
+            "answer" : "Revenge-seeking",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "Flirt",
+            "points" : "3"
+          },
+          "question" : "Which word describes you best?"
+        },
+        "results" : {
+          "result1" : {
+            "description" : "You're Chuck Bass. \"People like me don't write books, we're written about.\"",
+            "imageUrl" : "https://upload.wikimedia.org/wikipedia/en/a/a2/Chuck_Bass_Season_3.jpg"
+          },
+          "result2" : {
+            "description" : "You're Blair Waldorf. Queen B! Can I be friends with you??",
+            "imageUrl" : "https://az616578.vo.msecnd.net/files/2016/04/18/635965366554015627-1700359844_blair-waldorf-350x300.jpg"
+          },
+          "result3" : {
+            "description" : "You're Nate Archibald. Girl magnet, that son from the van der Bilt family...",
+            "imageUrl" : "https://i.pinimg.com/736x/47/e5/91/47e591d3f6458e8966569fda41139709--nate-archibald-chace-crawford.jpg"
+          }
+        },
+        "title" : "Which Gossip Girl Character Are You?"
+      }
+    },
+    "-L-on4OXp4EJNd5AfERf" : {
+      "author" : {
+        "displayName" : "Morris Fanclub",
+        "uid" : "tKSmypBIEjQPwKowua5yU0BZRwK2"
+      },
+      "count" : 2,
+      "quizDetails" : {
+        "count" : 1,
+        "description" : "Take this quiz to find out how \"Jacob Morris\" you are!",
+        "question1" : {
+          "option1" : {
+            "answer" : "SO MUCH. I have my favorites already picked out.",
+            "points" : "1"
+          },
+          "option2" : {
+            "answer" : "I'm more of a wine person.",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "Beer is so gross.",
+            "points" : "3"
+          },
+          "question" : "How much do you like going to breweries? "
+        },
+        "question2" : {
+          "option1" : {
+            "answer" : "Pun-related t-shirt",
+            "points" : "2"
+          },
+          "option2" : {
+            "answer" : "Button down and pants, shirt tucked in!",
+            "points" : "1"
+          },
+          "option3" : {
+            "answer" : "Hoodie and jeans",
+            "points" : "3"
+          },
+          "question" : "What's your dress code for today?"
+        },
+        "question3" : {
+          "option1" : {
+            "answer" : "Asleep.",
+            "points" : "3"
+          },
+          "option2" : {
+            "answer" : "Kinda confused but I'm here and alive.",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "Alert and ready to teach!",
+            "points" : "1"
+          },
+          "question" : "At 8:30 in the morning you are..."
+        },
+        "question4" : {
+          "option1" : {
+            "answer" : "I prefer artisanal coffee",
+            "points" : "3"
+          },
+          "option2" : {
+            "answer" : "Gotta get that oatmeal",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "I go every day even though it burns me",
+            "points" : "1"
+          },
+          "question" : "What are your feelings on the Starbucks at Suzallo?"
+        },
+        "question5" : {
+          "option1" : {
+            "answer" : "I make one everyday.",
+            "points" : "1"
+          },
+          "option2" : {
+            "answer" : "What's a task list?",
+            "points" : "2"
+          },
+          "option3" : {
+            "answer" : "I made like two maybe.",
+            "points" : "3"
+          },
+          "question" : "How many dank task lists have you made?"
+        },
+        "results" : {
+          "result1" : {
+            "description" : "Wow. You ARE Jacob Morris the master himself. ",
+            "imageUrl" : "http://phoenixaustralia.org/wp-content/uploads/2015/07/video-recovery.jpg"
+          },
+          "result2" : {
+            "description" : "They should call you trauma 2.0. You're almost him but not. So close to being the coolest.",
+            "imageUrl" : "https://k9firstresponders.files.wordpress.com/2014/10/trauma-tema-logo.jpg"
+          },
+          "result3" : {
+            "description" : "No, not \"Jacob Morris\" enough. Sorry! Better luck next time. *whisper* you'll never be as cool as him *whisper*",
+            "imageUrl" : "http://www.aspireonline.com.au/wp-content/uploads/trauma.jpg"
+          }
+        },
+        "title" : "How \"Jacob Morris\" Are You?"
+      }
+    }
+  },
+  "results" : {
+    "-L-iD7m6afCMqWSdJApS" : {
+      "quizId" : "-L-oixScBRckSMEuNF_9",
+      "quizTitle" : "Which Gossip Girl Character Are You?",
+      "result" : {
+        "description" : "You're Chuck Bass. \"People like me don't write books, we're written about.\"",
+        "imageUrl" : "https://upload.wikimedia.org/wikipedia/en/a/a2/Chuck_Bass_Season_3.jpg"
+      },
+      "uid" : "tKSmypBIEjQPwKowua5yU0BZRwK2"
+    },
+    "-L-jc3-mi9VEGv-c9qm4" : {
+      "quizId" : "-L-oixScBRckSMEuNF_9",
+      "quizTitle" : "Which Gossip Girl Character Are You?",
+      "result" : {
+        "description" : "You're Blair Waldorf. Queen B.",
+        "imageUrl" : "https://az616578.vo.msecnd.net/files/2016/04/18/635965366554015627-1700359844_blair-waldorf-350x300.jpg"
+      },
+      "uid" : "i7t5NdsLUjTZMgjl1vQqglkPm3w1"
+    },
+    "-L-jgRsRS3DaNasY5OLA" : {
+      "quizId" : "-L-jfAk4O5os93gR_uDH",
+      "quizTitle" : "What kind of pizza are you?",
+      "result" : {
+        "description" : "You prefer salads.",
+        "imageUrl" : "https://www.budgetbytes.com/wp-content/uploads/2017/03/Super-Fresh-Salad-front.jpg"
+      },
+      "uid" : "i7t5NdsLUjTZMgjl1vQqglkPm3w1"
+    },
+    "-L-m1GysEpNawf5OiAn4" : {
+      "quizId" : "-L-oixScBRckSMEuNF_9",
+      "quizTitle" : "Which Gossip Girl Character Are You?",
+      "result" : {
+        "description" : "You're Blair Waldorf. Queen B.",
+        "imageUrl" : "https://az616578.vo.msecnd.net/files/2016/04/18/635965366554015627-1700359844_blair-waldorf-350x300.jpg"
+      },
+      "uid" : "tKSmypBIEjQPwKowua5yU0BZRwK2"
+    },
+    "-L-mn043WHcYosRamx9a" : {
+      "quizId" : "-L-mmoRcDdp5Vw85E8nO",
+      "quizTitle" : "What kind of drunk are you?",
+      "result" : {
+        "description" : "The one that's always hungry",
+        "imageUrl" : "https://images-production.global.ssl.fastly.net/uploads/posts/image/142646/are-french-fries-good-for-you.jpg?auto=compress&crop=faces,top&fit=crop&h=562&q=55&w=750"
+      },
+      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
+    },
+    "-L-o9dbagYInYL5GxI_S" : {
+      "quizId" : "-L-mmoRcDdp5Vw85E8nO",
+      "quizTitle" : "What kind of drunk are you?",
+      "result" : {
+        "description" : "The one that's always hungry",
+        "imageUrl" : "https://images-production.global.ssl.fastly.net/uploads/posts/image/142646/are-french-fries-good-for-you.jpg?auto=compress&crop=faces,top&fit=crop&h=562&q=55&w=750"
+      },
+      "uid" : "tKSmypBIEjQPwKowua5yU0BZRwK2"
+    },
+    "-L-ocVpPzRZOqj1Q-m_f" : {
+      "quizId" : "-L-jfAk4O5os93gR_uDH",
+      "quizTitle" : "What kind of pizza are you?",
+      "result" : {
+        "description" : "You are a very normal cheesy pizza!",
+        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
+      },
+      "uid" : "tKSmypBIEjQPwKowua5yU0BZRwK2"
+    },
+    "-L-onX5GzAErFPkI7ame" : {
+      "quizId" : "-L-on4OXp4EJNd5AfERf",
+      "quizTitle" : "How \"Jacob Morris\" Are You?",
+      "result" : {
+        "description" : "They should call you trauma 2.0. You're almost him but not. So close to being the coolest.",
+        "imageUrl" : "https://k9firstresponders.files.wordpress.com/2014/10/trauma-tema-logo.jpg"
+      },
+      "uid" : "tKSmypBIEjQPwKowua5yU0BZRwK2"
+    },
+    "-L-ovNQsFFEvr1bdDcPf" : {
+      "quizId" : "-L-on4OXp4EJNd5AfERf",
+      "quizTitle" : "How \"Jacob Morris\" Are You?",
+      "result" : {
+        "description" : "They should call you trauma 2.0. You're almost him but not. So close to being the coolest.",
+        "imageUrl" : "https://k9firstresponders.files.wordpress.com/2014/10/trauma-tema-logo.jpg"
+      },
+      "uid" : "qluZm2ITZ3gHy6iH7uZvRjZf0F12"
+    },
+    "-L-ovTOGo9T9po2b7lN3" : {
+      "quizId" : "-L-on4OXp4EJNd5AfERf",
+      "quizTitle" : "How \"Jacob Morris\" Are You?",
+      "result" : {
+        "description" : "No, not \"Jacob Morris\" enough. Sorry! Better luck next time. *whisper* you'll never be as cool as him *whisper*",
+        "imageUrl" : "http://www.aspireonline.com.au/wp-content/uploads/trauma.jpg"
+      },
+      "uid" : "qluZm2ITZ3gHy6iH7uZvRjZf0F12"
+    },
+    "-L-p9WKvddgXH4cKhSKA" : {
+      "quizId" : "-L-on4OXp4EJNd5AfERf",
+      "quizTitle" : "How \"Jacob Morris\" Are You?",
+      "result" : {
+        "description" : "They should call you trauma 2.0. You're almost him but not. So close to being the coolest.",
+        "imageUrl" : "https://k9firstresponders.files.wordpress.com/2014/10/trauma-tema-logo.jpg"
+      },
+      "uid" : "i7t5NdsLUjTZMgjl1vQqglkPm3w1"
+    },
+    "-L-s58riM1GPuhIRM2_9" : {
+      "quizId" : "-L-jfAk4O5os93gR_uDH",
+      "quizTitle" : "What kind of pizza are you?",
+      "result" : {
+        "description" : "You are a very normal cheesy pizza!",
+        "imageUrl" : "https://media.istockphoto.com/photos/slice-of-pizza-margarita-lifted-up-picture-id96790826?k=6&m=96790826&s=612x612&w=0&h=N06jX7f5vNr0NmCngEiY2sMuZxfwY7fnblshyYPeW1E="
+      },
+      "uid" : "lDQuQzg0mIh2RYYonjFBcyRCEQr1"
+    },
+    "-L-s7EY0vyKC3DGbOgpy" : {
+      "quizId" : "-L-mmoRcDdp5Vw85E8nO",
+      "quizTitle" : "What kind of drunk are you?",
+      "result" : {
+        "description" : "The one that's always hungry",
+        "imageUrl" : "https://images-production.global.ssl.fastly.net/uploads/posts/image/142646/are-french-fries-good-for-you.jpg?auto=compress&crop=faces,top&fit=crop&h=562&q=55&w=750"
+      },
+      "uid" : "i7t5NdsLUjTZMgjl1vQqglkPm3w1"
+    }
+  }
+}
