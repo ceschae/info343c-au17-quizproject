@@ -14,7 +14,9 @@ export default class CreateQuiz extends React.Component {
             missingFields: false
         }
     }
-
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
     handleSubmit() {
         //state missingFields isn't updating fast enough so need this variable
         let canSubmit = true; //to determine if possible to submit. 
@@ -182,7 +184,7 @@ export default class CreateQuiz extends React.Component {
                     this.state.allDone ? 
                     <div>
                         <div className="alert alert-success my-3" role="alert">Success! Your quiz has been stored successfully.</div>
-                        <button type ="submit" className="btn btn-primary btn-lg btn-block mb-5 mt-3"
+                        <button type ="submit" className="btn btn-success btn-lg btn-block mb-5 mt-3"
                         onClick={() => {window.location.hash = "/home"}}>
                         View All Quizzes</button>
                     </div> :

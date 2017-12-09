@@ -16,7 +16,9 @@ export default class QuizView extends React.Component {
             imageUrl: ""
         }
     }
-
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
     // The algorithm for determining the result
     handleSubmit() {
         let countResults = [0, 0, 0];
@@ -70,6 +72,7 @@ export default class QuizView extends React.Component {
         let resultsRef = firebase.database().ref("results");
         resultsRef.push({
             quizTitle: this.state.quizRef.quizDetails.title,
+            quizId: this.props.match.params.quizKey,
             result: {
                 description: description,
                 imageUrl: image
