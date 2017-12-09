@@ -67,7 +67,7 @@ this.authUnsub();
          </div>
          </nav>
          :
-         <Redirect to="/" />
+         undefined
        }
           <header className="jumbotron">
           <h1 className="text-dark display-3">Boozefeed Quizzes</h1>
