@@ -11,7 +11,7 @@ export default class AboutView extends React.Component {
             'objectFit': 'cover',
              height: '250px'
         }
-        let url = "https://github.com";
+        let url = "https://ceschae.github.io/info343c-au17-quizproject/quiz-project/#";
         let appId = '134114333946019';
         return (
             <div className="container pb-5"> 
