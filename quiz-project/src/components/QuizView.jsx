@@ -104,7 +104,6 @@ export default class QuizView extends React.Component {
         if(!this.state.quizRef) {
             return <div>Loading... Please be patient</div>;
         }
-        
         return (
             <div className="container">
         
@@ -133,7 +132,7 @@ export default class QuizView extends React.Component {
                 {
                     this.state.done ? 
                     <Results description={this.state.description} 
-                        image={this.state.imageUrl} />
+                        image={this.state.imageUrl}/>
                     :
                     <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
                     onClick={() => this.handleSubmit()}>Submit!</button>
