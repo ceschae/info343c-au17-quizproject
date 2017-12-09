@@ -53,7 +53,7 @@ export default class SignUpView extends React.Component {
             { 
                 this.state.authenticated && <Redirect to="/quiz" />
             }
-            <h1 className="text-primary">Sign Up</h1>
+            <h1 className="text-secondary">Sign Up</h1>
             
             <form onSubmit={evt => this.handleSubmit(evt)}>
                 <div className="form-group"> 
@@ -77,11 +77,10 @@ export default class SignUpView extends React.Component {
                     onInput={evt => this.setState({name: evt.target.value})} required/>
                 </div>
                 <div className="form-group">
-                    <button type="submit" className="btn btn-primary">Sign Up!</button>
+                    <button type="submit" className="btn btn-secondary">Sign Up!</button>
                 </div>
             </form>
-            <p>Already have an account? <Link to="/">
-            Sign In!</Link></p>
+            <p>Already have an account? <Link className="text-danger" to="/">Sign In!</Link></p>
         </div>
       ) 
     }
