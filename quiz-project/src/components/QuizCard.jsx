@@ -26,9 +26,7 @@ export default class QuizCard extends React.Component {
                         }
                         <button className="btn btn-outline-primary">
                         <Link to= {{
-                            pathname:'/quiz/' + this.props.quizSnapshot.key,
-                            state: {quizRef: quiz,
-                                    quizSnapshot: this.props.quizSnapshot}}}> 
+                            pathname:'/quiz/' + this.props.quizSnapshot.key}}> 
                             Click here</Link></button>
                     </div>
                 </div>

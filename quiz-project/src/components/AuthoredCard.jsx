@@ -21,8 +21,6 @@ export default class AuthoredCard extends React.Component {
 
     render () {
         let quiz = this.props.quizSnapshot.val();
-        console.log(quiz);
-        console.log(this.props.quizSnapshot);
         let stats = "" + quiz.count + " ";
         if (quiz.count === 1) {
             stats += "person has";
