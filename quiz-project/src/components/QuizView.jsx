@@ -133,7 +133,7 @@ export default class QuizView extends React.Component {
                 {
                     this.state.done ? 
                     <Results description={this.state.description} 
-                        image={this.state.imageUrl} />
+                        image={this.state.imageUrl} thekey={this.props.match.params.quizKey}/>
                     :
                     <button type="button" className="btn btn-primary btn-lg btn-block mb-5"
                     onClick={() => this.handleSubmit()}>Submit!</button>
