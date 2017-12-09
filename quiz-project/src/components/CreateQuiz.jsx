@@ -134,10 +134,6 @@ export default class CreateQuiz extends React.Component {
         }
     }
 
-    submitResults() {
-
-    }
-
     render() {
         return (
             <div id="quiz" className="w-100">
@@ -146,7 +142,8 @@ export default class CreateQuiz extends React.Component {
                     <br/>
                     There are a total of 5 questions with 3 possible results. Using the drop down menu next to each question to 
                     assign each question to the corresponding result. The algorithm has already been calculated to determine 
-                    the results for the user.
+                    the results for the user. If you do not provide an image, or the URL is/becomes broken, a default image will 
+                    be provided to you.
                 </p>
                 <div className="card mb-3">
                     <div className="card-body">
