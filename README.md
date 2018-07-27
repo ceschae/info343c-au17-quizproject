@@ -1,3 +1,5 @@
+Click [HERE](http://bit.ly/boozefeed) to view the application!
+
 ## INFO 343 Final Project Proposal
 
 ### Describe what your team is proposing to build
