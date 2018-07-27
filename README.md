@@ -1,4 +1,6 @@
-Click [HERE](http://bit.ly/boozefeed) to view the application!
+### Click [HERE](http://bit.ly/boozefeed) to view the application!
+
+---
 
 ## INFO 343 Final Project Proposal
 
